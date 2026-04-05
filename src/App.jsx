@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import players2024 from './data/players_2024.json';
 import players2025 from './data/players_2025.json';
 import players2026 from './data/players_2026.json';
@@ -33,6 +34,7 @@ export default function App() {
 
   return (
     <div className="app">
+      <Analytics />
       <Header season={season} onSeason={handleSeason} />
 
       <main className="main">
