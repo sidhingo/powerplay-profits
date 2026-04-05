@@ -1,0 +1,2753 @@
+[
+  {
+    "id": 201,
+    "name": "Rishabh Pant",
+    "team": "DC",
+    "role": "Batter",
+    "nationality": "India",
+    "auction_price_cr": 27.0,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": "Missed IPL 2024 and 2025 \u2014 injury rehabilitation",
+    "prior_2024_batting": {
+      "matches": 0,
+      "runs": 0,
+      "strike_rate": 0,
+      "average": 0
+    },
+    "prior_2024_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prior_2025_batting": {
+      "matches": 0,
+      "runs": 0,
+      "strike_rate": 0,
+      "average": 0
+    },
+    "prior_2025_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prediction": {
+      "tier": "WATCH",
+      "confidence": 35,
+      "score_low": 18,
+      "score_high": 62,
+      "seasons_available": 0,
+      "rationale": "\u20b927cr with zero IPL data across 2024 and 2025. World-class when fit \u2014 but there is genuinely no recent form to anchor a score. Pure reputation play at a record price."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 62,
+      "strike_rate": 158.97,
+      "average": 31.0
+    },
+    "bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    }
+  },
+  {
+    "id": 202,
+    "name": "Cameron Green",
+    "team": "KKR",
+    "role": "All-rounder",
+    "nationality": "Australia",
+    "auction_price_cr": 25.2,
+    "auction_cap_cr": 18.0,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": "Missed IPL 2025 \u2014 back surgery",
+    "prior_2024_batting": {
+      "matches": 0,
+      "runs": 0,
+      "strike_rate": 0,
+      "average": 0
+    },
+    "prior_2024_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prior_2025_batting": {
+      "matches": 0,
+      "runs": 0,
+      "strike_rate": 0,
+      "average": 0
+    },
+    "prior_2025_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prediction": {
+      "tier": "LIKELY OVERPAID",
+      "confidence": 52,
+      "score_low": 15,
+      "score_high": 55,
+      "seasons_available": 0,
+      "rationale": "Record overseas price (\u20b925.2cr) for a player returning from back surgery with no IPL 2024 or 2025 data. KKR paid a massive trust premium on potential, not proof."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 103,
+      "strike_rate": 171.67,
+      "average": 51.5
+    },
+    "bowling": {
+      "matches": 2,
+      "wickets": 0,
+      "economy": 9.5,
+      "average": 0
+    }
+  },
+  {
+    "id": 203,
+    "name": "Virat Kohli",
+    "team": "RCB",
+    "role": "Batter",
+    "nationality": "India",
+    "auction_price_cr": 21.0,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": null,
+    "prior_2024_batting": {
+      "matches": 15,
+      "runs": 741,
+      "strike_rate": 154.69,
+      "average": 61.75
+    },
+    "prior_2024_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prior_2025_batting": {
+      "matches": 17,
+      "runs": 657,
+      "strike_rate": 145.45,
+      "average": 54.75
+    },
+    "prior_2025_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prediction": {
+      "tier": "LIKELY STEAL",
+      "confidence": 75,
+      "score_low": 62,
+      "score_high": 88,
+      "seasons_available": 2,
+      "rationale": "741 runs in 2024, 657 in 2025 \u2014 600+ in consecutive seasons is a near-unique track record. At \u20b921cr the price is meaningful but the floor is exceptionally well-documented."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 48,
+      "strike_rate": 137.14,
+      "average": 24.0
+    },
+    "bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    }
+  },
+  {
+    "id": 204,
+    "name": "Sai Sudharsan",
+    "team": "GT",
+    "role": "Batter",
+    "nationality": "India",
+    "auction_price_cr": 8.5,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": null,
+    "prior_2024_batting": {
+      "matches": 14,
+      "runs": 527,
+      "strike_rate": 137.96,
+      "average": 39.07
+    },
+    "prior_2024_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prior_2025_batting": {
+      "matches": 15,
+      "runs": 759,
+      "strike_rate": 145.89,
+      "average": 49.81
+    },
+    "prior_2025_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prediction": {
+      "tier": "LIKELY STEAL",
+      "confidence": 85,
+      "score_low": 74,
+      "score_high": 96,
+      "seasons_available": 2,
+      "rationale": "527 runs in 2024, Orange Cap (759 runs) in 2025. Clear upward trajectory. At \u20b98.5cr he is almost certainly the best value batter in the 2026 auction. GT retained him at a fraction of market rate."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 72,
+      "strike_rate": 152.34,
+      "average": 36.0
+    },
+    "bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    }
+  },
+  {
+    "id": 205,
+    "name": "Suryakumar Yadav",
+    "team": "MI",
+    "role": "Batter",
+    "nationality": "India",
+    "auction_price_cr": 16.35,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": null,
+    "prior_2024_batting": {
+      "matches": 14,
+      "runs": 346,
+      "strike_rate": 152.86,
+      "average": 28.83
+    },
+    "prior_2024_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prior_2025_batting": {
+      "matches": 14,
+      "runs": 717,
+      "strike_rate": 175.12,
+      "average": 59.75
+    },
+    "prior_2025_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prediction": {
+      "tier": "LIKELY STEAL",
+      "confidence": 72,
+      "score_low": 58,
+      "score_high": 88,
+      "seasons_available": 2,
+      "rationale": "Huge improvement from 2024 (346 runs) to 2025 (717 runs at 175 SR). Two-season average is strong and the 2025 trajectory suggests the floor is rising."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 54,
+      "strike_rate": 169.23,
+      "average": 27.0
+    },
+    "bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    }
+  },
+  {
+    "id": 206,
+    "name": "Jasprit Bumrah",
+    "team": "MI",
+    "role": "Bowler",
+    "nationality": "India",
+    "auction_price_cr": 18.0,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": null,
+    "prior_2024_batting": {
+      "matches": 13,
+      "runs": 10,
+      "strike_rate": 83.33,
+      "average": 5.0
+    },
+    "prior_2024_bowling": {
+      "matches": 13,
+      "wickets": 15,
+      "economy": 6.48,
+      "average": 17.47
+    },
+    "prior_2025_batting": {
+      "matches": 14,
+      "runs": 11,
+      "strike_rate": 78.57,
+      "average": 3.67
+    },
+    "prior_2025_bowling": {
+      "matches": 14,
+      "wickets": 15,
+      "economy": 7.1,
+      "average": 20.8
+    },
+    "prediction": {
+      "tier": "FAIR VALUE",
+      "confidence": 68,
+      "score_low": 42,
+      "score_high": 72,
+      "seasons_available": 2,
+      "rationale": "Consistent 15 wickets in both 2024 and 2025, but economy crept from 6.48 to 7.10. At \u20b918cr the two-season average puts him in fair value territory \u2014 reliable but not underpriced."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 3,
+      "strike_rate": 75.0,
+      "average": 1.5
+    },
+    "bowling": {
+      "matches": 2,
+      "wickets": 2,
+      "economy": 7.5,
+      "average": 21.0
+    }
+  },
+  {
+    "id": 207,
+    "name": "Prasidh Krishna",
+    "team": "GT",
+    "role": "Bowler",
+    "nationality": "India",
+    "auction_price_cr": 9.5,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": null,
+    "prior_2024_batting": {
+      "matches": 14,
+      "runs": 10,
+      "strike_rate": 62.5,
+      "average": 2.5
+    },
+    "prior_2024_bowling": {
+      "matches": 14,
+      "wickets": 12,
+      "economy": 8.9,
+      "average": 28.08
+    },
+    "prior_2025_batting": {
+      "matches": 15,
+      "runs": 12,
+      "strike_rate": 75.0,
+      "average": 3.0
+    },
+    "prior_2025_bowling": {
+      "matches": 15,
+      "wickets": 25,
+      "economy": 8.27,
+      "average": 19.52
+    },
+    "prediction": {
+      "tier": "LIKELY STEAL",
+      "confidence": 76,
+      "score_low": 60,
+      "score_high": 88,
+      "seasons_available": 2,
+      "rationale": "12 wkts in 2024, Purple Cap (25 wkts) in 2025. Two-season average of 18.5 wickets at \u20b99.5cr is excellent value. GT retained him wisely."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 2,
+      "strike_rate": 50.0,
+      "average": 1.0
+    },
+    "bowling": {
+      "matches": 2,
+      "wickets": 3,
+      "economy": 8.0,
+      "average": 16.67
+    }
+  },
+  {
+    "id": 208,
+    "name": "Shreyas Iyer",
+    "team": "PBKS",
+    "role": "Batter",
+    "nationality": "India",
+    "auction_price_cr": 26.75,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": null,
+    "prior_2024_batting": {
+      "matches": 16,
+      "runs": 351,
+      "strike_rate": 136.19,
+      "average": 29.25
+    },
+    "prior_2024_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prior_2025_batting": {
+      "matches": 17,
+      "runs": 603,
+      "strike_rate": 175.07,
+      "average": 40.2
+    },
+    "prior_2025_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prediction": {
+      "tier": "WATCH",
+      "confidence": 52,
+      "score_low": 32,
+      "score_high": 62,
+      "seasons_available": 2,
+      "rationale": "Big jump from 2024 (351 runs, 136 SR) to 2025 (603 runs, 175 SR). Two-season average is decent but not \u20b926.75cr decent. If 2024 is the floor, this is a poor bet at that price."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 88,
+      "strike_rate": 168.54,
+      "average": 44.0
+    },
+    "bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    }
+  },
+  {
+    "id": 209,
+    "name": "Sunil Narine",
+    "team": "KKR",
+    "role": "All-rounder",
+    "nationality": "West Indies",
+    "auction_price_cr": 6.0,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": null,
+    "prior_2024_batting": {
+      "matches": 16,
+      "runs": 488,
+      "strike_rate": 179.41,
+      "average": 35.14
+    },
+    "prior_2024_bowling": {
+      "matches": 16,
+      "wickets": 17,
+      "economy": 6.74,
+      "average": 19.94
+    },
+    "prior_2025_batting": {
+      "matches": 14,
+      "runs": 325,
+      "strike_rate": 162.5,
+      "average": 27.08
+    },
+    "prior_2025_bowling": {
+      "matches": 14,
+      "wickets": 13,
+      "economy": 7.12,
+      "average": 23.69
+    },
+    "prediction": {
+      "tier": "LIKELY STEAL",
+      "confidence": 82,
+      "score_low": 68,
+      "score_high": 92,
+      "seasons_available": 2,
+      "rationale": "Two seasons of elite dual contribution at just \u20b96cr. Slight dip in 2025 but the two-season average is still exceptional. Among the clearest steals in the 2026 auction."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 45,
+      "strike_rate": 160.71,
+      "average": 22.5
+    },
+    "bowling": {
+      "matches": 2,
+      "wickets": 2,
+      "economy": 7.0,
+      "average": 15.0
+    }
+  },
+  {
+    "id": 210,
+    "name": "Ravindra Jadeja",
+    "team": "RR",
+    "role": "All-rounder",
+    "nationality": "India",
+    "auction_price_cr": 18.0,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": "Traded from CSK to RR",
+    "prior_2024_batting": {
+      "matches": 14,
+      "runs": 198,
+      "strike_rate": 141.43,
+      "average": 24.75
+    },
+    "prior_2024_bowling": {
+      "matches": 14,
+      "wickets": 12,
+      "economy": 7.8,
+      "average": 22.42
+    },
+    "prior_2025_batting": {
+      "matches": 14,
+      "runs": 156,
+      "strike_rate": 138.05,
+      "average": 19.5
+    },
+    "prior_2025_bowling": {
+      "matches": 14,
+      "wickets": 10,
+      "economy": 8.2,
+      "average": 27.3
+    },
+    "prediction": {
+      "tier": "WATCH",
+      "confidence": 48,
+      "score_low": 28,
+      "score_high": 58,
+      "seasons_available": 2,
+      "rationale": "Declining output across both seasons \u2014 fewer runs, fewer wickets, rising economy. New team (CSK to RR) adds uncertainty. \u20b918cr demands more than either season delivered."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 38,
+      "strike_rate": 126.67,
+      "average": 19.0
+    },
+    "bowling": {
+      "matches": 2,
+      "wickets": 2,
+      "economy": 7.5,
+      "average": 22.5
+    }
+  },
+  {
+    "id": 211,
+    "name": "Matheesha Pathirana",
+    "team": "KKR",
+    "role": "Bowler",
+    "nationality": "Sri Lanka",
+    "auction_price_cr": 18.0,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": null,
+    "prior_2024_batting": {
+      "matches": 13,
+      "runs": 4,
+      "strike_rate": 40.0,
+      "average": 1.33
+    },
+    "prior_2024_bowling": {
+      "matches": 13,
+      "wickets": 19,
+      "economy": 8.6,
+      "average": 16.89
+    },
+    "prior_2025_batting": {
+      "matches": 14,
+      "runs": 6,
+      "strike_rate": 60.0,
+      "average": 2.0
+    },
+    "prior_2025_bowling": {
+      "matches": 14,
+      "wickets": 18,
+      "economy": 8.85,
+      "average": 18.94
+    },
+    "prediction": {
+      "tier": "FAIR VALUE",
+      "confidence": 62,
+      "score_low": 44,
+      "score_high": 70,
+      "seasons_available": 2,
+      "rationale": "Consistent 18\u201319 wickets across both seasons but economy drifting upward (8.60 \u2192 8.85). At \u20b918cr with KKR, two-season average supports fair value \u2014 not a steal, not overpaid."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 2,
+      "strike_rate": 50.0,
+      "average": 1.0
+    },
+    "bowling": {
+      "matches": 2,
+      "wickets": 4,
+      "economy": 7.5,
+      "average": 12.5
+    }
+  },
+  {
+    "id": 212,
+    "name": "Ravi Bishnoi",
+    "team": "RR",
+    "role": "Bowler",
+    "nationality": "India",
+    "auction_price_cr": 7.2,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": null,
+    "prior_2024_batting": {
+      "matches": 14,
+      "runs": 12,
+      "strike_rate": 80.0,
+      "average": 3.0
+    },
+    "prior_2024_bowling": {
+      "matches": 14,
+      "wickets": 14,
+      "economy": 8.3,
+      "average": 21.36
+    },
+    "prior_2025_batting": {
+      "matches": 14,
+      "runs": 14,
+      "strike_rate": 93.33,
+      "average": 4.67
+    },
+    "prior_2025_bowling": {
+      "matches": 14,
+      "wickets": 16,
+      "economy": 8.1,
+      "average": 19.5
+    },
+    "prediction": {
+      "tier": "LIKELY STEAL",
+      "confidence": 72,
+      "score_low": 62,
+      "score_high": 86,
+      "seasons_available": 2,
+      "rationale": "14 wkts in 2024, 16 in 2025 \u2014 steady improvement with tightening economy. At \u20b97.2cr the two-season average consistently outperforms the price. RR bought him well."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 3,
+      "strike_rate": 60.0,
+      "average": 1.5
+    },
+    "bowling": {
+      "matches": 2,
+      "wickets": 3,
+      "economy": 7.0,
+      "average": 15.33
+    }
+  },
+  {
+    "id": 213,
+    "name": "Noor Ahmad",
+    "team": "CSK",
+    "role": "Bowler",
+    "nationality": "Afghanistan",
+    "auction_price_cr": 10.0,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": null,
+    "prior_2024_batting": {
+      "matches": 12,
+      "runs": 4,
+      "strike_rate": 44.4,
+      "average": 1.33
+    },
+    "prior_2024_bowling": {
+      "matches": 12,
+      "wickets": 11,
+      "economy": 8.24,
+      "average": 21.82
+    },
+    "prior_2025_batting": {
+      "matches": 14,
+      "runs": 5,
+      "strike_rate": 55.56,
+      "average": 1.67
+    },
+    "prior_2025_bowling": {
+      "matches": 14,
+      "wickets": 24,
+      "economy": 7.92,
+      "average": 15.83
+    },
+    "prediction": {
+      "tier": "LIKELY STEAL",
+      "confidence": 74,
+      "score_low": 64,
+      "score_high": 90,
+      "seasons_available": 2,
+      "rationale": "11 wkts in 2024, 24 wkts in 2025 \u2014 dramatic step-up with improving economy. Two-season average of 17.5 wickets at \u20b910cr is sharp. The upward trajectory strengthens the case further."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 1,
+      "strike_rate": 33.3,
+      "average": 0.5
+    },
+    "bowling": {
+      "matches": 2,
+      "wickets": 3,
+      "economy": 7.5,
+      "average": 12.5
+    }
+  },
+  {
+    "id": 214,
+    "name": "Angkrish Raghuvanshi",
+    "team": "KKR",
+    "role": "Batter",
+    "nationality": "India",
+    "auction_price_cr": 3.0,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": "Debuted mid-2025",
+    "prior_2024_batting": {
+      "matches": 0,
+      "runs": 0,
+      "strike_rate": 0,
+      "average": 0
+    },
+    "prior_2024_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prior_2025_batting": {
+      "matches": 8,
+      "runs": 187,
+      "strike_rate": 162.61,
+      "average": 31.17
+    },
+    "prior_2025_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prediction": {
+      "tier": "LIKELY STEAL",
+      "confidence": 62,
+      "score_low": 55,
+      "score_high": 86,
+      "seasons_available": 1,
+      "rationale": "Only 2025 data (8 matches, 162 SR) \u2014 one season is a limited sample, widening the confidence band. But \u20b93cr is so low that even discounted output comfortably beats the price."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 103,
+      "strike_rate": 185.71,
+      "average": 51.5
+    },
+    "bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    }
+  },
+  {
+    "id": 215,
+    "name": "Ishan Kishan",
+    "team": "SRH",
+    "role": "Batter",
+    "nationality": "India",
+    "auction_price_cr": 11.25,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": "Missed IPL 2024 and 2025",
+    "prior_2024_batting": {
+      "matches": 0,
+      "runs": 0,
+      "strike_rate": 0,
+      "average": 0
+    },
+    "prior_2024_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prior_2025_batting": {
+      "matches": 0,
+      "runs": 0,
+      "strike_rate": 0,
+      "average": 0
+    },
+    "prior_2025_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prediction": {
+      "tier": "WATCH",
+      "confidence": 42,
+      "score_low": 28,
+      "score_high": 68,
+      "seasons_available": 0,
+      "rationale": "Absent from both IPL 2024 and 2025. Was exceptional in 2022\u201323 but that data is stale. SRH are betting on a return to form at \u20b911.25cr with no recent evidence to lean on."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 94,
+      "strike_rate": 174.07,
+      "average": 47.0
+    },
+    "bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    }
+  },
+  {
+    "id": 216,
+    "name": "Prashant Veer",
+    "team": "CSK",
+    "role": "All-rounder",
+    "nationality": "India",
+    "auction_price_cr": 14.2,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": "Uncapped \u2014 no prior IPL data",
+    "prior_2024_batting": {
+      "matches": 0,
+      "runs": 0,
+      "strike_rate": 0,
+      "average": 0
+    },
+    "prior_2024_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prior_2025_batting": {
+      "matches": 0,
+      "runs": 0,
+      "strike_rate": 0,
+      "average": 0
+    },
+    "prior_2025_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prediction": {
+      "tier": "WATCH",
+      "confidence": 28,
+      "score_low": 10,
+      "score_high": 72,
+      "seasons_available": 0,
+      "rationale": "Record-equalling uncapped price (\u20b914.2cr) with zero IPL history. Widest confidence band in the dataset. CSK's development record is excellent but no IPL data means no score anchor."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 22,
+      "strike_rate": 122.22,
+      "average": 11.0
+    },
+    "bowling": {
+      "matches": 2,
+      "wickets": 2,
+      "economy": 9.0,
+      "average": 27.0
+    }
+  },
+  {
+    "id": 217,
+    "name": "Kartik Sharma",
+    "team": "CSK",
+    "role": "All-rounder",
+    "nationality": "India",
+    "auction_price_cr": 14.2,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": "Uncapped \u2014 no prior IPL data",
+    "prior_2024_batting": {
+      "matches": 0,
+      "runs": 0,
+      "strike_rate": 0,
+      "average": 0
+    },
+    "prior_2024_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prior_2025_batting": {
+      "matches": 0,
+      "runs": 0,
+      "strike_rate": 0,
+      "average": 0
+    },
+    "prior_2025_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prediction": {
+      "tier": "WATCH",
+      "confidence": 28,
+      "score_low": 10,
+      "score_high": 72,
+      "seasons_available": 0,
+      "rationale": "Same record uncapped price as Prashant Veer. CSK made a bold double bet on domestic talent. Zero IPL data makes this a wide-range prediction entirely."
+    },
+    "batting": {
+      "matches": 1,
+      "runs": 18,
+      "strike_rate": 138.46,
+      "average": 18.0
+    },
+    "bowling": {
+      "matches": 1,
+      "wickets": 1,
+      "economy": 8.5,
+      "average": 25.5
+    }
+  },
+  {
+    "id": 218,
+    "name": "Ryan Rickelton",
+    "team": "MI",
+    "role": "Batter",
+    "nationality": "S Africa",
+    "auction_price_cr": 7.0,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": "First IPL season",
+    "prior_2024_batting": {
+      "matches": 0,
+      "runs": 0,
+      "strike_rate": 0,
+      "average": 0
+    },
+    "prior_2024_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prior_2025_batting": {
+      "matches": 0,
+      "runs": 0,
+      "strike_rate": 0,
+      "average": 0
+    },
+    "prior_2025_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prediction": {
+      "tier": "WATCH",
+      "confidence": 45,
+      "score_low": 35,
+      "score_high": 72,
+      "seasons_available": 0,
+      "rationale": "No IPL history but strong international form for SA. \u20b97cr is a moderate bet. MI have a good eye for overseas openers. Early signs (81 runs in 2 games) are encouraging."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 81,
+      "strike_rate": 172.34,
+      "average": 40.5
+    },
+    "bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    }
+  },
+  {
+    "id": 219,
+    "name": "Venkatesh Iyer",
+    "team": "RCB",
+    "role": "All-rounder",
+    "nationality": "India",
+    "auction_price_cr": 7.0,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": null,
+    "prior_2024_batting": {
+      "matches": 0,
+      "runs": 0,
+      "strike_rate": 0,
+      "average": 0
+    },
+    "prior_2024_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prior_2025_batting": {
+      "matches": 14,
+      "runs": 328,
+      "strike_rate": 156.19,
+      "average": 29.82
+    },
+    "prior_2025_bowling": {
+      "matches": 14,
+      "wickets": 6,
+      "economy": 9.55,
+      "average": 44.17
+    },
+    "prediction": {
+      "tier": "FAIR VALUE",
+      "confidence": 55,
+      "score_low": 40,
+      "score_high": 68,
+      "seasons_available": 1,
+      "rationale": "328 runs at 156 SR in 2025 with modest bowling contribution. At \u20b97cr (down from \u20b923.75cr with KKR) this is a sharp buy for RCB if he settles into a clear role."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 45,
+      "strike_rate": 137.5,
+      "average": 22.5
+    },
+    "bowling": {
+      "matches": 2,
+      "wickets": 1,
+      "economy": 9.75,
+      "average": 39.0
+    }
+  },
+  {
+    "id": 220,
+    "name": "Sanju Samson",
+    "team": "CSK",
+    "role": "Batter",
+    "nationality": "India",
+    "auction_price_cr": 18.0,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": "Traded from RR to CSK",
+    "prior_2024_batting": {
+      "matches": 16,
+      "runs": 531,
+      "strike_rate": 153.32,
+      "average": 38.93
+    },
+    "prior_2024_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prior_2025_batting": {
+      "matches": 16,
+      "runs": 442,
+      "strike_rate": 148.15,
+      "average": 31.57
+    },
+    "prior_2025_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prediction": {
+      "tier": "FAIR VALUE",
+      "confidence": 60,
+      "score_low": 40,
+      "score_high": 68,
+      "seasons_available": 2,
+      "rationale": "531 runs in 2024, 442 in 2025 \u2014 consistent but declining. At \u20b918cr with CSK in a new environment, the two-season average puts this at fair value rather than a steal."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 58,
+      "strike_rate": 145.0,
+      "average": 29.0
+    },
+    "bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    }
+  },
+  {
+    "id": 221,
+    "name": "Travis Head",
+    "team": "SRH",
+    "role": "Batter",
+    "nationality": "Australia",
+    "auction_price_cr": 14.0,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": null,
+    "prior_2024_batting": {
+      "matches": 15,
+      "runs": 567,
+      "strike_rate": 191.55,
+      "average": 40.5
+    },
+    "prior_2024_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prior_2025_batting": {
+      "matches": 13,
+      "runs": 478,
+      "strike_rate": 188.58,
+      "average": 43.45
+    },
+    "prior_2025_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prediction": {
+      "tier": "LIKELY STEAL",
+      "confidence": 80,
+      "score_low": 68,
+      "score_high": 92,
+      "seasons_available": 2,
+      "rationale": "567 runs at 191 SR in 2024, 478 at 188 SR in 2025. The most consistent elite SR batter in this dataset across two seasons. At \u20b914cr this is exceptional value."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 38,
+      "strike_rate": 152.0,
+      "average": 19.0
+    },
+    "bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    }
+  },
+  {
+    "id": 222,
+    "name": "Axar Patel",
+    "team": "DC",
+    "role": "All-rounder",
+    "nationality": "India",
+    "auction_price_cr": 16.5,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": null,
+    "prior_2024_batting": {
+      "matches": 14,
+      "runs": 231,
+      "strike_rate": 155.03,
+      "average": 33.0
+    },
+    "prior_2024_bowling": {
+      "matches": 14,
+      "wickets": 10,
+      "economy": 8.22,
+      "average": 25.9
+    },
+    "prior_2025_batting": {
+      "matches": 13,
+      "runs": 276,
+      "strike_rate": 158.62,
+      "average": 30.67
+    },
+    "prior_2025_bowling": {
+      "matches": 13,
+      "wickets": 11,
+      "economy": 8.05,
+      "average": 23.82
+    },
+    "prediction": {
+      "tier": "FAIR VALUE",
+      "confidence": 65,
+      "score_low": 45,
+      "score_high": 70,
+      "seasons_available": 2,
+      "rationale": "Steady dual contributor across both seasons. Economy improving (8.22 \u2192 8.05). At \u20b916.5cr the price is high but consistent all-round output justifies it \u2014 squarely fair value."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 42,
+      "strike_rate": 148.0,
+      "average": 21.0
+    },
+    "bowling": {
+      "matches": 2,
+      "wickets": 2,
+      "economy": 8.0,
+      "average": 24.0
+    }
+  },
+  {
+    "id": 223,
+    "name": "Kuldeep Yadav",
+    "team": "DC",
+    "role": "Bowler",
+    "nationality": "India",
+    "auction_price_cr": 13.25,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": null,
+    "prior_2024_batting": {
+      "matches": 14,
+      "runs": 26,
+      "strike_rate": 118.18,
+      "average": 13.0
+    },
+    "prior_2024_bowling": {
+      "matches": 14,
+      "wickets": 19,
+      "economy": 7.83,
+      "average": 16.58
+    },
+    "prior_2025_batting": {
+      "matches": 13,
+      "runs": 18,
+      "strike_rate": 112.5,
+      "average": 6.0
+    },
+    "prior_2025_bowling": {
+      "matches": 13,
+      "wickets": 15,
+      "economy": 7.62,
+      "average": 19.73
+    },
+    "prediction": {
+      "tier": "FAIR VALUE",
+      "confidence": 66,
+      "score_low": 48,
+      "score_high": 74,
+      "seasons_available": 2,
+      "rationale": "19 wkts in 2024, 15 in 2025 with excellent economy both years (sub-7.9). At \u20b913.25cr the price has crept up, but the wrist-spin quality and economy make this fair to slightly good value."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 8,
+      "strike_rate": 114.29,
+      "average": 4.0
+    },
+    "bowling": {
+      "matches": 2,
+      "wickets": 2,
+      "economy": 7.5,
+      "average": 20.0
+    }
+  },
+  {
+    "id": 224,
+    "name": "Harshit Rana",
+    "team": "KKR",
+    "role": "Bowler",
+    "nationality": "India",
+    "auction_price_cr": 4.0,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": null,
+    "prior_2024_batting": {
+      "matches": 14,
+      "runs": 22,
+      "strike_rate": 104.76,
+      "average": 7.33
+    },
+    "prior_2024_bowling": {
+      "matches": 14,
+      "wickets": 13,
+      "economy": 8.9,
+      "average": 22.77
+    },
+    "prior_2025_batting": {
+      "matches": 14,
+      "runs": 18,
+      "strike_rate": 100.0,
+      "average": 6.0
+    },
+    "prior_2025_bowling": {
+      "matches": 14,
+      "wickets": 15,
+      "economy": 9.12,
+      "average": 22.4
+    },
+    "prediction": {
+      "tier": "LIKELY STEAL",
+      "confidence": 68,
+      "score_low": 55,
+      "score_high": 82,
+      "seasons_available": 2,
+      "rationale": "13 then 15 wickets at \u20b94cr across two seasons. Economy is a touch high but the wicket-taking rate is strong. Excellent price-to-output ratio makes this a reliable steal."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 6,
+      "strike_rate": 85.71,
+      "average": 3.0
+    },
+    "bowling": {
+      "matches": 2,
+      "wickets": 2,
+      "economy": 8.5,
+      "average": 24.0
+    }
+  },
+  {
+    "id": 225,
+    "name": "Heinrich Klaasen",
+    "team": "SRH",
+    "role": "Batter",
+    "nationality": "S Africa",
+    "auction_price_cr": 23.0,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": null,
+    "prior_2024_batting": {
+      "matches": 14,
+      "runs": 479,
+      "strike_rate": 180.83,
+      "average": 53.22
+    },
+    "prior_2024_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prior_2025_batting": {
+      "matches": 14,
+      "runs": 487,
+      "strike_rate": 172.69,
+      "average": 44.27
+    },
+    "prior_2025_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prediction": {
+      "tier": "WATCH",
+      "confidence": 58,
+      "score_low": 42,
+      "score_high": 68,
+      "seasons_available": 2,
+      "rationale": "Remarkably consistent \u2014 479 runs at 180 SR in 2024, 487 at 172 SR in 2025. The issue is the price: \u20b923cr is a very steep ask even for this output level. Solid but priced near ceiling."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 83,
+      "strike_rate": 184.44,
+      "average": 41.5
+    },
+    "bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    }
+  },
+  {
+    "id": 226,
+    "name": "Abhishek Sharma",
+    "team": "SRH",
+    "role": "All-rounder",
+    "nationality": "India",
+    "auction_price_cr": 14.0,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": null,
+    "prior_2024_batting": {
+      "matches": 15,
+      "runs": 484,
+      "strike_rate": 204.22,
+      "average": 34.57
+    },
+    "prior_2024_bowling": {
+      "matches": 15,
+      "wickets": 3,
+      "economy": 8.55,
+      "average": 62.33
+    },
+    "prior_2025_batting": {
+      "matches": 13,
+      "runs": 392,
+      "strike_rate": 186.67,
+      "average": 36.55
+    },
+    "prior_2025_bowling": {
+      "matches": 13,
+      "wickets": 4,
+      "economy": 9.2,
+      "average": 47.5
+    },
+    "prediction": {
+      "tier": "LIKELY STEAL",
+      "confidence": 70,
+      "score_low": 58,
+      "score_high": 84,
+      "seasons_available": 2,
+      "rationale": "Two seasons of elite strike rate (204 SR in 2024, 186 in 2025). Minimal bowling contribution but the batting quality at \u20b914cr still represents strong value given the volume and pace of scoring."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 68,
+      "strike_rate": 189.0,
+      "average": 34.0
+    },
+    "bowling": {
+      "matches": 2,
+      "wickets": 1,
+      "economy": 8.75,
+      "average": 35.0
+    }
+  },
+  {
+    "id": 227,
+    "name": "Josh Hazlewood",
+    "team": "RCB",
+    "role": "Bowler",
+    "nationality": "Australia",
+    "auction_price_cr": 12.5,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": null,
+    "prior_2024_batting": {
+      "matches": 0,
+      "runs": 0,
+      "strike_rate": 0,
+      "average": 0
+    },
+    "prior_2024_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prior_2025_batting": {
+      "matches": 16,
+      "runs": 8,
+      "strike_rate": 66.67,
+      "average": 2.0
+    },
+    "prior_2025_bowling": {
+      "matches": 16,
+      "wickets": 22,
+      "economy": 8.05,
+      "average": 20.18
+    },
+    "prediction": {
+      "tier": "LIKELY STEAL",
+      "confidence": 65,
+      "score_low": 55,
+      "score_high": 82,
+      "seasons_available": 1,
+      "rationale": "22 wickets in 2025 at excellent economy (8.05) \u2014 strong debut IPL season. Only one season available so confidence band is wider, but the output-to-price ratio at \u20b912.5cr looks very good."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 1,
+      "strike_rate": 33.3,
+      "average": 0.5
+    },
+    "bowling": {
+      "matches": 2,
+      "wickets": 3,
+      "economy": 7.75,
+      "average": 13.33
+    }
+  },
+  {
+    "id": 228,
+    "name": "Liam Livingstone",
+    "team": "PBKS",
+    "role": "All-rounder",
+    "nationality": "England",
+    "auction_price_cr": 8.75,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": null,
+    "prior_2024_batting": {
+      "matches": 14,
+      "runs": 283,
+      "strike_rate": 163.58,
+      "average": 28.3
+    },
+    "prior_2024_bowling": {
+      "matches": 14,
+      "wickets": 7,
+      "economy": 9.1,
+      "average": 38.14
+    },
+    "prior_2025_batting": {
+      "matches": 17,
+      "runs": 468,
+      "strike_rate": 161.38,
+      "average": 33.43
+    },
+    "prior_2025_bowling": {
+      "matches": 17,
+      "wickets": 9,
+      "economy": 8.92,
+      "average": 34.67
+    },
+    "prediction": {
+      "tier": "LIKELY STEAL",
+      "confidence": 68,
+      "score_low": 56,
+      "score_high": 80,
+      "seasons_available": 2,
+      "rationale": "Consistent dual contributor \u2014 batting output improved in 2025 and bowling economy edged down. At \u20b98.75cr retained by PBKS, the two-season average strongly outperforms the price."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 52,
+      "strike_rate": 156.0,
+      "average": 26.0
+    },
+    "bowling": {
+      "matches": 2,
+      "wickets": 1,
+      "economy": 9.0,
+      "average": 36.0
+    }
+  },
+  {
+    "id": 229,
+    "name": "Varun Chakaravarthy",
+    "team": "KKR",
+    "role": "Bowler",
+    "nationality": "India",
+    "auction_price_cr": 12.0,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": null,
+    "prior_2024_batting": {
+      "matches": 16,
+      "runs": 8,
+      "strike_rate": 61.54,
+      "average": 4.0
+    },
+    "prior_2024_bowling": {
+      "matches": 16,
+      "wickets": 21,
+      "economy": 8.07,
+      "average": 17.62
+    },
+    "prior_2025_batting": {
+      "matches": 14,
+      "runs": 9,
+      "strike_rate": 64.29,
+      "average": 4.5
+    },
+    "prior_2025_bowling": {
+      "matches": 14,
+      "wickets": 16,
+      "economy": 8.18,
+      "average": 19.69
+    },
+    "prediction": {
+      "tier": "FAIR VALUE",
+      "confidence": 64,
+      "score_low": 46,
+      "score_high": 72,
+      "seasons_available": 2,
+      "rationale": "21 then 16 wickets with tight economy across both seasons. Slight dip in 2025 output. At \u20b912cr the two-season average justifies the price \u2014 strong but not a bargain given the step-down in wickets."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 2,
+      "strike_rate": 50.0,
+      "average": 1.0
+    },
+    "bowling": {
+      "matches": 2,
+      "wickets": 2,
+      "economy": 7.75,
+      "average": 21.0
+    }
+  },
+  {
+    "id": 230,
+    "name": "Tilak Varma",
+    "team": "MI",
+    "role": "Batter",
+    "nationality": "India",
+    "auction_price_cr": 8.0,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": null,
+    "prior_2024_batting": {
+      "matches": 14,
+      "runs": 343,
+      "strike_rate": 147.21,
+      "average": 38.11
+    },
+    "prior_2024_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prior_2025_batting": {
+      "matches": 14,
+      "runs": 468,
+      "strike_rate": 162.5,
+      "average": 46.8
+    },
+    "prior_2025_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prediction": {
+      "tier": "LIKELY STEAL",
+      "confidence": 74,
+      "score_low": 62,
+      "score_high": 86,
+      "seasons_available": 2,
+      "rationale": "343 runs in 2024, 468 in 2025 \u2014 clear upward trend in both volume and strike rate. At \u20b98cr this is excellent value. MI have a proven match-winner at a very reasonable price."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 61,
+      "strike_rate": 158.0,
+      "average": 30.5
+    },
+    "bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    }
+  },
+  {
+    "id": 231,
+    "name": "Rohit Sharma",
+    "team": "MI",
+    "role": "Batter",
+    "nationality": "India",
+    "auction_price_cr": 16.35,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": null,
+    "prior_2024_batting": {
+      "matches": 14,
+      "runs": 417,
+      "strike_rate": 148.4,
+      "average": 31.92
+    },
+    "prior_2024_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prior_2025_batting": {
+      "matches": 14,
+      "runs": 390,
+      "strike_rate": 139.78,
+      "average": 30.0
+    },
+    "prior_2025_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prediction": {
+      "tier": "FAIR VALUE",
+      "confidence": 62,
+      "score_low": 40,
+      "score_high": 66,
+      "seasons_available": 2,
+      "rationale": "417 runs in 2024, 390 in 2025 \u2014 slightly declining volume and SR. At \u20b916.35cr MI pay a legacy premium. Two-season average is decent but the trajectory is the wrong direction."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 78,
+      "strike_rate": 148.0,
+      "average": 39.0
+    },
+    "bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    }
+  },
+  {
+    "id": 232,
+    "name": "Yashasvi Jaiswal",
+    "team": "RR",
+    "role": "Batter",
+    "nationality": "India",
+    "auction_price_cr": 18.0,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": null,
+    "prior_2024_batting": {
+      "matches": 14,
+      "runs": 435,
+      "strike_rate": 168.6,
+      "average": 36.25
+    },
+    "prior_2024_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prior_2025_batting": {
+      "matches": 14,
+      "runs": 559,
+      "strike_rate": 159.71,
+      "average": 43.0
+    },
+    "prior_2025_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prediction": {
+      "tier": "LIKELY STEAL",
+      "confidence": 70,
+      "score_low": 58,
+      "score_high": 82,
+      "seasons_available": 2,
+      "rationale": "435 then 559 runs \u2014 improving volume across both seasons. SR dipped slightly but consistency is evident. At \u20b918cr this is solid value for a top-order batter of this calibre."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 66,
+      "strike_rate": 162.0,
+      "average": 33.0
+    },
+    "bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    }
+  },
+  {
+    "id": 233,
+    "name": "KL Rahul",
+    "team": "DC",
+    "role": "Batter",
+    "nationality": "India",
+    "auction_price_cr": 14.0,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": null,
+    "prior_2024_batting": {
+      "matches": 13,
+      "runs": 520,
+      "strike_rate": 136.84,
+      "average": 43.33
+    },
+    "prior_2024_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prior_2025_batting": {
+      "matches": 13,
+      "runs": 539,
+      "strike_rate": 149.72,
+      "average": 53.9
+    },
+    "prior_2025_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prediction": {
+      "tier": "LIKELY STEAL",
+      "confidence": 68,
+      "score_low": 55,
+      "score_high": 78,
+      "seasons_available": 2,
+      "rationale": "520 then 539 runs with improving SR (136 \u2192 149). Very consistent across both seasons. At \u20b914cr this is quietly good value \u2014 DC retained a reliable anchor batter at a reasonable price."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 44,
+      "strike_rate": 137.5,
+      "average": 22.0
+    },
+    "bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    }
+  },
+  {
+    "id": 234,
+    "name": "Shubman Gill",
+    "team": "GT",
+    "role": "Batter",
+    "nationality": "India",
+    "auction_price_cr": 16.5,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": null,
+    "prior_2024_batting": {
+      "matches": 14,
+      "runs": 426,
+      "strike_rate": 147.92,
+      "average": 35.5
+    },
+    "prior_2024_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prior_2025_batting": {
+      "matches": 15,
+      "runs": 650,
+      "strike_rate": 148.97,
+      "average": 46.43
+    },
+    "prior_2025_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prediction": {
+      "tier": "LIKELY STEAL",
+      "confidence": 72,
+      "score_low": 60,
+      "score_high": 84,
+      "seasons_available": 2,
+      "rationale": "426 runs in 2024, 650 in 2025 \u2014 significant volume jump. SR is steady but the run tally is now elite. At \u20b916.5cr he is underpriced for a batter who delivered the third-most runs in 2025."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 72,
+      "strike_rate": 151.0,
+      "average": 36.0
+    },
+    "bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    }
+  },
+  {
+    "id": 235,
+    "name": "Pat Cummins",
+    "team": "SRH",
+    "role": "All-rounder",
+    "nationality": "Australia",
+    "auction_price_cr": 18.5,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": null,
+    "prior_2024_batting": {
+      "matches": 14,
+      "runs": 183,
+      "strike_rate": 146.4,
+      "average": 36.6
+    },
+    "prior_2024_bowling": {
+      "matches": 14,
+      "wickets": 16,
+      "economy": 9.22,
+      "average": 24.06
+    },
+    "prior_2025_batting": {
+      "matches": 13,
+      "runs": 145,
+      "strike_rate": 138.1,
+      "average": 26.27
+    },
+    "prior_2025_bowling": {
+      "matches": 13,
+      "wickets": 11,
+      "economy": 9.5,
+      "average": 27.27
+    },
+    "prediction": {
+      "tier": "WATCH",
+      "confidence": 50,
+      "score_low": 30,
+      "score_high": 60,
+      "seasons_available": 2,
+      "rationale": "Declining on both fronts \u2014 fewer runs, fewer wickets, rising economy (9.22 \u2192 9.50). At \u20b918.5cr SRH are banking on captain leadership value beyond the stats. Hard to justify on numbers alone."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 28,
+      "strike_rate": 130.0,
+      "average": 14.0
+    },
+    "bowling": {
+      "matches": 2,
+      "wickets": 2,
+      "economy": 9.25,
+      "average": 27.5
+    }
+  },
+  {
+    "id": 236,
+    "name": "Riyan Parag",
+    "team": "RR",
+    "role": "All-rounder",
+    "nationality": "India",
+    "auction_price_cr": 14.0,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": null,
+    "prior_2024_batting": {
+      "matches": 16,
+      "runs": 573,
+      "strike_rate": 149.22,
+      "average": 52.09
+    },
+    "prior_2024_bowling": {
+      "matches": 16,
+      "wickets": 6,
+      "economy": 9.29,
+      "average": 37.67
+    },
+    "prior_2025_batting": {
+      "matches": 14,
+      "runs": 414,
+      "strike_rate": 158.62,
+      "average": 37.64
+    },
+    "prior_2025_bowling": {
+      "matches": 14,
+      "wickets": 8,
+      "economy": 9.35,
+      "average": 30.75
+    },
+    "prediction": {
+      "tier": "WATCH",
+      "confidence": 55,
+      "score_low": 38,
+      "score_high": 65,
+      "seasons_available": 2,
+      "rationale": "Good batter across both seasons but bowling contribution is thin and expensive. At \u20b914cr (big jump from \u20b93.8cr in 2024) he needs to develop his bowling to justify the price on our all-rounder model."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 52,
+      "strike_rate": 148.0,
+      "average": 26.0
+    },
+    "bowling": {
+      "matches": 2,
+      "wickets": 1,
+      "economy": 9.5,
+      "average": 38.0
+    }
+  },
+  {
+    "id": 237,
+    "name": "Andre Russell",
+    "team": "KKR",
+    "role": "All-rounder",
+    "nationality": "West Indies",
+    "auction_price_cr": 12.0,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": null,
+    "prior_2024_batting": {
+      "matches": 16,
+      "runs": 222,
+      "strike_rate": 189.74,
+      "average": 24.67
+    },
+    "prior_2024_bowling": {
+      "matches": 16,
+      "wickets": 19,
+      "economy": 9.45,
+      "average": 15.58
+    },
+    "prior_2025_batting": {
+      "matches": 14,
+      "runs": 198,
+      "strike_rate": 178.38,
+      "average": 22.0
+    },
+    "prior_2025_bowling": {
+      "matches": 14,
+      "wickets": 14,
+      "economy": 9.68,
+      "average": 17.86
+    },
+    "prediction": {
+      "tier": "FAIR VALUE",
+      "confidence": 60,
+      "score_low": 42,
+      "score_high": 68,
+      "seasons_available": 2,
+      "rationale": "Consistently destructive batting SR (189\u2192178) and strong wicket-taking but economy is pricey (9.45\u21929.68). Slight dip in both disciplines in 2025. At \u20b912cr the two-season average lands in fair value."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 38,
+      "strike_rate": 172.0,
+      "average": 19.0
+    },
+    "bowling": {
+      "matches": 2,
+      "wickets": 2,
+      "economy": 9.5,
+      "average": 19.0
+    }
+  },
+  {
+    "id": 238,
+    "name": "Shivam Dube",
+    "team": "CSK",
+    "role": "All-rounder",
+    "nationality": "India",
+    "auction_price_cr": 4.0,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": null,
+    "prior_2024_batting": {
+      "matches": 15,
+      "runs": 329,
+      "strike_rate": 159.22,
+      "average": 29.91
+    },
+    "prior_2024_bowling": {
+      "matches": 15,
+      "wickets": 4,
+      "economy": 9.75,
+      "average": 55.25
+    },
+    "prior_2025_batting": {
+      "matches": 13,
+      "runs": 287,
+      "strike_rate": 152.39,
+      "average": 28.7
+    },
+    "prior_2025_bowling": {
+      "matches": 13,
+      "wickets": 5,
+      "economy": 9.9,
+      "average": 44.6
+    },
+    "prediction": {
+      "tier": "LIKELY STEAL",
+      "confidence": 65,
+      "score_low": 52,
+      "score_high": 76,
+      "seasons_available": 2,
+      "rationale": "Consistent 280\u2013330 runs at 150+ SR in both seasons. Bowling is token but batting contribution at \u20b94cr is strong value. CSK retained a reliable middle-order finisher at a very sharp price."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 44,
+      "strike_rate": 146.0,
+      "average": 22.0
+    },
+    "bowling": {
+      "matches": 2,
+      "wickets": 0,
+      "economy": 10.0,
+      "average": 0
+    }
+  },
+  {
+    "id": 239,
+    "name": "Arshdeep Singh",
+    "team": "PBKS",
+    "role": "Bowler",
+    "nationality": "India",
+    "auction_price_cr": 18.0,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": null,
+    "prior_2024_batting": {
+      "matches": 14,
+      "runs": 22,
+      "strike_rate": 91.67,
+      "average": 7.33
+    },
+    "prior_2024_bowling": {
+      "matches": 14,
+      "wickets": 19,
+      "economy": 8.98,
+      "average": 19.74
+    },
+    "prior_2025_batting": {
+      "matches": 17,
+      "runs": 18,
+      "strike_rate": 90.0,
+      "average": 4.5
+    },
+    "prior_2025_bowling": {
+      "matches": 17,
+      "wickets": 18,
+      "economy": 8.6,
+      "average": 23.56
+    },
+    "prediction": {
+      "tier": "FAIR VALUE",
+      "confidence": 63,
+      "score_low": 44,
+      "score_high": 70,
+      "seasons_available": 2,
+      "rationale": "19 then 18 wickets \u2014 very consistent. Economy improved (8.98 \u2192 8.60) which is encouraging. At \u20b918cr the price is high but the two-season consistency supports a fair value rating."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 4,
+      "strike_rate": 80.0,
+      "average": 2.0
+    },
+    "bowling": {
+      "matches": 2,
+      "wickets": 2,
+      "economy": 8.5,
+      "average": 22.0
+    }
+  },
+  {
+    "id": 240,
+    "name": "T Natarajan",
+    "team": "SRH",
+    "role": "Bowler",
+    "nationality": "India",
+    "auction_price_cr": 10.75,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": null,
+    "prior_2024_batting": {
+      "matches": 14,
+      "runs": 5,
+      "strike_rate": 62.5,
+      "average": 2.5
+    },
+    "prior_2024_bowling": {
+      "matches": 14,
+      "wickets": 16,
+      "economy": 9.28,
+      "average": 19.44
+    },
+    "prior_2025_batting": {
+      "matches": 13,
+      "runs": 4,
+      "strike_rate": 50.0,
+      "average": 2.0
+    },
+    "prior_2025_bowling": {
+      "matches": 13,
+      "wickets": 13,
+      "economy": 9.42,
+      "average": 23.69
+    },
+    "prediction": {
+      "tier": "WATCH",
+      "confidence": 52,
+      "score_low": 35,
+      "score_high": 62,
+      "seasons_available": 2,
+      "rationale": "16 then 13 wickets with rising economy (9.28\u21929.42). Dipping output at a high price point. At \u20b910.75cr the two-season average delivers borderline value \u2014 needs wickets to justify the price."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 2,
+      "strike_rate": 40.0,
+      "average": 1.0
+    },
+    "bowling": {
+      "matches": 2,
+      "wickets": 2,
+      "economy": 9.25,
+      "average": 24.0
+    }
+  },
+  {
+    "id": 241,
+    "name": "Kagiso Rabada",
+    "team": "PBKS",
+    "role": "Bowler",
+    "nationality": "S Africa",
+    "auction_price_cr": 10.75,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": null,
+    "prior_2024_batting": {
+      "matches": 12,
+      "runs": 12,
+      "strike_rate": 85.71,
+      "average": 6.0
+    },
+    "prior_2024_bowling": {
+      "matches": 12,
+      "wickets": 13,
+      "economy": 9.35,
+      "average": 21.69
+    },
+    "prior_2025_batting": {
+      "matches": 14,
+      "runs": 10,
+      "strike_rate": 71.43,
+      "average": 5.0
+    },
+    "prior_2025_bowling": {
+      "matches": 14,
+      "wickets": 13,
+      "economy": 9.55,
+      "average": 24.62
+    },
+    "prediction": {
+      "tier": "WATCH",
+      "confidence": 50,
+      "score_low": 32,
+      "score_high": 60,
+      "seasons_available": 2,
+      "rationale": "Identical wicket tally (13) across both seasons but economy is drifting upward (9.35\u21929.55). At \u20b910.75cr with PBKS the two-season average barely justifies the price. Needs improvement in economy."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 5,
+      "strike_rate": 71.4,
+      "average": 2.5
+    },
+    "bowling": {
+      "matches": 2,
+      "wickets": 2,
+      "economy": 9.0,
+      "average": 22.5
+    }
+  },
+  {
+    "id": 242,
+    "name": "Mohammed Siraj",
+    "team": "GT",
+    "role": "Bowler",
+    "nationality": "India",
+    "auction_price_cr": 11.5,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": null,
+    "prior_2024_batting": {
+      "matches": 13,
+      "runs": 6,
+      "strike_rate": 54.55,
+      "average": 3.0
+    },
+    "prior_2024_bowling": {
+      "matches": 13,
+      "wickets": 12,
+      "economy": 9.12,
+      "average": 25.58
+    },
+    "prior_2025_batting": {
+      "matches": 15,
+      "runs": 8,
+      "strike_rate": 53.33,
+      "average": 2.67
+    },
+    "prior_2025_bowling": {
+      "matches": 15,
+      "wickets": 16,
+      "economy": 8.48,
+      "average": 22.31
+    },
+    "prediction": {
+      "tier": "LIKELY STEAL",
+      "confidence": 65,
+      "score_low": 52,
+      "score_high": 78,
+      "seasons_available": 2,
+      "rationale": "12 then 16 wickets with meaningfully improving economy (9.12\u21928.48). Clear upward trajectory in both output and efficiency. At \u20b911.5cr retained by GT, the two-season improvement makes this a good bet."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 2,
+      "strike_rate": 40.0,
+      "average": 1.0
+    },
+    "bowling": {
+      "matches": 2,
+      "wickets": 3,
+      "economy": 8.25,
+      "average": 15.33
+    }
+  },
+  {
+    "id": 243,
+    "name": "Hardik Pandya",
+    "team": "MI",
+    "role": "All-rounder",
+    "nationality": "India",
+    "auction_price_cr": 15.0,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": null,
+    "prior_2024_batting": {
+      "matches": 14,
+      "runs": 216,
+      "strike_rate": 142.11,
+      "average": 27.0
+    },
+    "prior_2024_bowling": {
+      "matches": 14,
+      "wickets": 11,
+      "economy": 9.4,
+      "average": 28.73
+    },
+    "prior_2025_batting": {
+      "matches": 14,
+      "runs": 231,
+      "strike_rate": 148.08,
+      "average": 23.1
+    },
+    "prior_2025_bowling": {
+      "matches": 14,
+      "wickets": 14,
+      "economy": 9.1,
+      "average": 22.5
+    },
+    "prediction": {
+      "tier": "FAIR VALUE",
+      "confidence": 60,
+      "score_low": 40,
+      "score_high": 65,
+      "seasons_available": 2,
+      "rationale": "Modest improvement in 2025 \u2014 slightly more runs, more wickets, better economy. Still short of elite all-rounder output for a \u20b915cr price. Fair value at best, relying on leadership contribution beyond the numbers."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 36,
+      "strike_rate": 138.0,
+      "average": 18.0
+    },
+    "bowling": {
+      "matches": 2,
+      "wickets": 2,
+      "economy": 9.0,
+      "average": 22.5
+    }
+  },
+  {
+    "id": 244,
+    "name": "Prithvi Shaw",
+    "team": "RR",
+    "role": "Batter",
+    "nationality": "India",
+    "auction_price_cr": 3.2,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": "Returning from limited game time in 2024-25",
+    "prior_2024_batting": {
+      "matches": 0,
+      "runs": 0,
+      "strike_rate": 0,
+      "average": 0
+    },
+    "prior_2024_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prior_2025_batting": {
+      "matches": 0,
+      "runs": 0,
+      "strike_rate": 0,
+      "average": 0
+    },
+    "prior_2025_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prediction": {
+      "tier": "WATCH",
+      "confidence": 40,
+      "score_low": 25,
+      "score_high": 70,
+      "seasons_available": 0,
+      "rationale": "No recent IPL data but \u20b93.2cr is a low-risk bet. Was electric in his early career (189+ SR). If he finds form, this could be a significant steal \u2014 but the form gap is a real concern."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 55,
+      "strike_rate": 155.56,
+      "average": 27.5
+    },
+    "bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    }
+  },
+  {
+    "id": 245,
+    "name": "Krunal Pandya",
+    "team": "RCB",
+    "role": "All-rounder",
+    "nationality": "India",
+    "auction_price_cr": 5.75,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": null,
+    "prior_2024_batting": {
+      "matches": 14,
+      "runs": 192,
+      "strike_rate": 138.13,
+      "average": 24.0
+    },
+    "prior_2024_bowling": {
+      "matches": 14,
+      "wickets": 8,
+      "economy": 8.45,
+      "average": 29.63
+    },
+    "prior_2025_batting": {
+      "matches": 17,
+      "runs": 287,
+      "strike_rate": 139.32,
+      "average": 26.09
+    },
+    "prior_2025_bowling": {
+      "matches": 17,
+      "wickets": 13,
+      "economy": 7.85,
+      "average": 28.23
+    },
+    "prediction": {
+      "tier": "LIKELY STEAL",
+      "confidence": 70,
+      "score_low": 58,
+      "score_high": 80,
+      "seasons_available": 2,
+      "rationale": "Clear improvement in 2025 \u2014 more runs, more wickets, better economy (8.45\u21927.85). At \u20b95.75cr this is very good value for a consistent dual contributor. RCB retained their most reliable all-rounder cheaply."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 34,
+      "strike_rate": 130.0,
+      "average": 17.0
+    },
+    "bowling": {
+      "matches": 2,
+      "wickets": 2,
+      "economy": 7.75,
+      "average": 22.5
+    }
+  },
+  {
+    "id": 246,
+    "name": "Yuzvendra Chahal",
+    "team": "PBKS",
+    "role": "Bowler",
+    "nationality": "India",
+    "auction_price_cr": 18.0,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": null,
+    "prior_2024_batting": {
+      "matches": 14,
+      "runs": 8,
+      "strike_rate": 88.89,
+      "average": 2.67
+    },
+    "prior_2024_bowling": {
+      "matches": 14,
+      "wickets": 13,
+      "economy": 8.5,
+      "average": 26.31
+    },
+    "prior_2025_batting": {
+      "matches": 17,
+      "runs": 6,
+      "strike_rate": 75.0,
+      "average": 1.5
+    },
+    "prior_2025_bowling": {
+      "matches": 17,
+      "wickets": 18,
+      "economy": 9.05,
+      "average": 25.61
+    },
+    "prediction": {
+      "tier": "WATCH",
+      "confidence": 52,
+      "score_low": 35,
+      "score_high": 62,
+      "seasons_available": 2,
+      "rationale": "Wickets improved (13\u219218) but economy worsened noticeably (8.50\u21929.05). At \u20b918cr PBKS are paying top dollar for a spinner whose economy is a concern in increasingly high-scoring conditions."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 1,
+      "strike_rate": 50.0,
+      "average": 0.5
+    },
+    "bowling": {
+      "matches": 2,
+      "wickets": 2,
+      "economy": 8.75,
+      "average": 22.5
+    }
+  },
+  {
+    "id": 247,
+    "name": "Ruturaj Gaikwad",
+    "team": "CSK",
+    "role": "Batter",
+    "nationality": "India",
+    "auction_price_cr": 6.0,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": null,
+    "prior_2024_batting": {
+      "matches": 12,
+      "runs": 372,
+      "strike_rate": 145.31,
+      "average": 37.2
+    },
+    "prior_2024_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prior_2025_batting": {
+      "matches": 13,
+      "runs": 332,
+      "strike_rate": 139.66,
+      "average": 30.18
+    },
+    "prior_2025_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prediction": {
+      "tier": "LIKELY STEAL",
+      "confidence": 66,
+      "score_low": 54,
+      "score_high": 76,
+      "seasons_available": 2,
+      "rationale": "372 then 332 runs \u2014 slight dip but SR and volume remain solid. At \u20b96cr CSK retained their opener at excellent value. Even the 2025 output easily outperforms this price point."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 48,
+      "strike_rate": 142.0,
+      "average": 24.0
+    },
+    "bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    }
+  },
+  {
+    "id": 248,
+    "name": "Nuwan Thushara",
+    "team": "RCB",
+    "role": "Bowler",
+    "nationality": "Sri Lanka",
+    "auction_price_cr": 2.6,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": null,
+    "prior_2024_batting": {
+      "matches": 0,
+      "runs": 0,
+      "strike_rate": 0,
+      "average": 0
+    },
+    "prior_2024_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prior_2025_batting": {
+      "matches": 16,
+      "runs": 6,
+      "strike_rate": 50.0,
+      "average": 2.0
+    },
+    "prior_2025_bowling": {
+      "matches": 16,
+      "wickets": 17,
+      "economy": 8.95,
+      "average": 22.35
+    },
+    "prediction": {
+      "tier": "LIKELY STEAL",
+      "confidence": 60,
+      "score_low": 50,
+      "score_high": 78,
+      "seasons_available": 1,
+      "rationale": "17 wickets in his first full season at \u20b92.6cr \u2014 strong debut output. Economy of 8.95 is a touch high but at this price any wicket-taking pace bowler is a steal. One season only, hence the wider band."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 2,
+      "strike_rate": 40.0,
+      "average": 1.0
+    },
+    "bowling": {
+      "matches": 2,
+      "wickets": 2,
+      "economy": 8.75,
+      "average": 20.0
+    }
+  },
+  {
+    "id": 250,
+    "name": "Glenn Phillips",
+    "team": "GT",
+    "role": "All-rounder",
+    "nationality": "New Zealand",
+    "auction_price_cr": 2.0,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": null,
+    "prior_2024_batting": {
+      "matches": 0,
+      "runs": 0,
+      "strike_rate": 0,
+      "average": 0
+    },
+    "prior_2024_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prior_2025_batting": {
+      "matches": 14,
+      "runs": 198,
+      "strike_rate": 155.91,
+      "average": 22.0
+    },
+    "prior_2025_bowling": {
+      "matches": 14,
+      "wickets": 7,
+      "economy": 8.75,
+      "average": 29.86
+    },
+    "prediction": {
+      "tier": "LIKELY STEAL",
+      "confidence": 58,
+      "score_low": 48,
+      "score_high": 76,
+      "seasons_available": 1,
+      "rationale": "Useful dual contributor in 2025 at \u20b92cr \u2014 solid SR batting and tidy bowling economy. At this price even modest output is a steal. One season of data widens the band but the price makes the risk trivial."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 28,
+      "strike_rate": 140.0,
+      "average": 14.0
+    },
+    "bowling": {
+      "matches": 2,
+      "wickets": 1,
+      "economy": 8.5,
+      "average": 34.0
+    }
+  },
+  {
+    "id": 251,
+    "name": "Rinku Singh",
+    "team": "KKR",
+    "role": "Batter",
+    "nationality": "India",
+    "auction_price_cr": 13.0,
+    "season": 2026,
+    "season_status": "in_progress",
+    "prior_note": null,
+    "prior_2024_batting": {
+      "matches": 16,
+      "runs": 279,
+      "strike_rate": 153.85,
+      "average": 34.88
+    },
+    "prior_2024_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prior_2025_batting": {
+      "matches": 14,
+      "runs": 362,
+      "strike_rate": 155.36,
+      "average": 40.22
+    },
+    "prior_2025_bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    },
+    "prediction": {
+      "tier": "WATCH",
+      "confidence": 55,
+      "score_low": 38,
+      "score_high": 64,
+      "seasons_available": 2,
+      "rationale": "279 then 362 runs \u2014 improving. But \u20b913cr is a steep ask for a finisher averaging 35\u201340. Two-season average is solid but the price requires more top-order consistency than he has shown."
+    },
+    "batting": {
+      "matches": 2,
+      "runs": 32,
+      "strike_rate": 145.0,
+      "average": 16.0
+    },
+    "bowling": {
+      "matches": 0,
+      "wickets": 0,
+      "economy": 0,
+      "average": 0
+    }
+  }
+]
