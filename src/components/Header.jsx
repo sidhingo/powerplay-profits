@@ -8,7 +8,7 @@ export default function Header({ season, onSeason }) {
             <p>IPL AUCTION ROI</p>
           </div>
           <nav className="season-tabs">
-            {[2024, 2025, 2026].map(y => (
+            {[2023, 2024, 2025, 2026].map(y => (
               <button
                 key={y}
                 className={`s-tab ${season === y ? 'active' : ''}`}

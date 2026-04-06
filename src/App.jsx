@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import players2023 from './data/players_2023.json';
 import players2024 from './data/players_2024.json';
 import players2025 from './data/players_2025.json';
 import players2026 from './data/players_2026.json';
@@ -11,6 +12,7 @@ import Methodology from './components/Methodology';
 import Highlights  from './components/Highlights';
 
 const SEASONS = {
+  2023: { players: computeIndex(players2023), status: 'complete' },
   2024: { players: computeIndex(players2024), status: 'complete' },
   2025: { players: computeIndex(players2025), status: 'complete' },
   2026: { players: computeIndex(players2026), status: 'in_progress' },
@@ -26,7 +28,11 @@ export default function App() {
   const { players: allPlayers } = SEASONS[season];
   const teams = useMemo(() => getTeams(allPlayers), [allPlayers]);
 
-  const handleSeason = (s) => { setSeason(s); setFilters(DEFAULT_FILTERS);window.scrollTo({ top: 0, behavior: 'smooth' }); };
+  const handleSeason = (s) => {
+    setSeason(s);
+    setFilters(DEFAULT_FILTERS);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
   const handleFilter = (patch) => setFilters(f => ({ ...f, ...patch }));
 
   const filtered = useMemo(() => filterPlayers(allPlayers, filters), [allPlayers, filters]);

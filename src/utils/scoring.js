@@ -32,12 +32,14 @@
 
 // Season-average economy rates (IPL) — used for floating eco benchmark
 export const SEASON_ECO = {
+  2023: 8.74,
   2024: 8.90,
   2025: 9.10,
   2026: 9.00, // estimated; will update as season progresses
 };
 
 const SEASON_MAX_MATCHES = {
+  2023: 17,
   2024: 17,
   2025: 17,
   2026: 17,

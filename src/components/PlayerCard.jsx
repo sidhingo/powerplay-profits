@@ -2,7 +2,11 @@ import { TEAM_COLORS, ROLE_COLORS } from '../utils/constants';
 import { getVerdict, PREDICTION_STYLES, SEASON_ECO } from '../utils/scoring';
 import TeamCrest from './TeamCrest';
 import CountryFlag from './CountryFlag';
-const SEASON_MED_PRICE = { 2024: 7, 2025: 13, 2026: 11 };
+
+const SEASON_MED_PRICE = { 2023: 7, 2024: 7, 2025: 13, 2026: 11 };
+
+// Season average SR for batters — used for context comparison
+const SEASON_AVG_SR = { 2023: 138, 2024: 142, 2025: 145, 2026: 143 };
 
 /* ── Value score block ──────────────────────────────────────── */
 function ValueBlock({ player, verdictCls, verdictLabel, color }) {
@@ -61,16 +65,34 @@ function CardHeader({ player, teamColor, roleColor }) {
   );
 }
 
+/* ── Context comparison row ─────────────────────────────────── */
+function ContextRow({ label, playerVal, seasonVal, unit = '', higherIsBetter = true }) {
+  if (!playerVal || playerVal === 0) return null;
+  const diff = +(playerVal - seasonVal).toFixed(2);
+  const better = higherIsBetter ? diff > 0 : diff < 0;
+  const color = better ? '#22c55e' : diff === 0 ? '#7a7568' : '#f87171';
+  const sign = diff > 0 ? '+' : '';
+  return (
+    <div className="ctx-row">
+      <span className="ctx-label">{label}</span>
+      <span className="ctx-val">{playerVal}{unit}</span>
+      <span className="ctx-vs">vs {seasonVal}{unit} avg</span>
+      <span className="ctx-diff" style={{ color }}>{sign}{diff}{unit}</span>
+    </div>
+  );
+}
+
 /* ── Complete season card ───────────────────────────────────── */
 function CompleteCard({ player }) {
   const tc        = TEAM_COLORS[player.team] || '#555';
   const rc        = ROLE_COLORS[player.role]  || '#888';
-  const medPrice = SEASON_MED_PRICE[player.season] || 10;
-const verdict  = getVerdict(player.global_score, player.auction_price_cr, medPrice);
+  const season    = player.season;
+  const medPrice  = SEASON_MED_PRICE[season] || 10;
+  const verdict   = getVerdict(player.global_score, player.auction_price_cr, medPrice);
   const bat       = player.batting;
   const bowl      = player.bowling;
-  const season    = player.season;
   const seasonEco = SEASON_ECO[season] || 9.0;
+  const seasonSR  = SEASON_AVG_SR[season] || 140;
 
   const ecoDelta = bowl?.economy > 0
     ? +(seasonEco - bowl.economy).toFixed(2)
@@ -80,10 +102,13 @@ const verdict  = getVerdict(player.global_score, player.auction_price_cr, medPri
   const hasDual = player.role === 'All-rounder' &&
     (bat?.strike_rate || 0) >= 130 && (bowl?.wickets || 0) >= 8;
 
-    const verdictColor =
+  const verdictColor =
     verdict.cls === 'v-steal' ? '#22c55e' :
     verdict.cls === 'v-fair'  ? '#f59e0b' :
     verdict.cls === 'v-cheap' ? '#9ca3af' : '#f87171';
+
+  const showBatCtx  = bat?.matches > 0 && bat?.runs > 0;
+  const showBowlCtx = bowl?.matches > 0 && bowl?.wickets > 0;
 
   return (
     <div className="p-card">
@@ -97,49 +122,39 @@ const verdict  = getVerdict(player.global_score, player.auction_price_cr, medPri
         color={verdictColor}
       />
 
-      {/* Stat badges — per-match output */}
-      <div className="stat-badges-section">
-        <div className="stat-badges-title">
-          PER-MATCH OUTPUT
-          {hasDual && <span className="dual-bonus-badge">+15% DUAL BONUS</span>}
-        </div>
-        <div className="stat-badges-row">
-          {bat?.matches > 0 && (
-            <div className="stat-badge bat-badge">
-              <span className="stat-badge-val">{(bat.runs / bat.matches).toFixed(1)}</span>
-              <span className="stat-badge-label">runs / match</span>
-              <span className="stat-badge-sub">{bat.matches}M · SR {bat.strike_rate} · Avg {bat.average}</span>
-            </div>
+      {/* Season context comparison */}
+      {(showBatCtx || showBowlCtx) && (
+        <div className="ctx-section">
+          <div className="ctx-title">
+            VS SEASON AVERAGE
+            {hasDual && <span className="dual-bonus-badge">+15% DUAL BONUS</span>}
+          </div>
+          {showBatCtx && (
+            <ContextRow
+              label="Strike Rate"
+              playerVal={bat.strike_rate}
+              seasonVal={seasonSR}
+              higherIsBetter={true}
+            />
           )}
-          {bat?.matches === 0 && (
-            <div className="stat-badge" style={{ opacity: 0.4 }}>
-              <span className="stat-badge-val">—</span>
-              <span className="stat-badge-label">batting</span>
-              <span className="stat-badge-sub">not applicable</span>
-            </div>
+          {showBowlCtx && (
+            <ContextRow
+              label="Economy"
+              playerVal={bowl.economy}
+              seasonVal={seasonEco}
+              higherIsBetter={false}
+            />
           )}
-          {bowl?.matches > 0 && bowl.wickets > 0 ? (
-            <div className="stat-badge bowl-badge">
-              <span className="stat-badge-val">{(bowl.wickets / bowl.matches).toFixed(2)}</span>
-              <span className="stat-badge-label">wickets / match</span>
-              <span className="stat-badge-sub">
-                {bowl.matches}M · {bowl.economy} eco
-                {ecoDelta !== null && (
-                  <span style={{ color: ecoColor, marginLeft: 4 }}>
-                    ({ecoDelta > 0 ? '-' : '+'}{Math.abs(ecoDelta)} vs avg)
-                  </span>
-                )}
-              </span>
-            </div>
-          ) : (
-            <div className="stat-badge" style={{ opacity: 0.4 }}>
-              <span className="stat-badge-val">—</span>
-              <span className="stat-badge-label">bowling</span>
-              <span className="stat-badge-sub">not applicable</span>
-            </div>
+          {showBowlCtx && (
+            <ContextRow
+              label="Wkts / match"
+              playerVal={+(bowl.wickets / bowl.matches).toFixed(2)}
+              seasonVal={1.0}
+              higherIsBetter={true}
+            />
           )}
         </div>
-      </div>
+      )}
 
       {/* Full stats */}
       <div className="stats-row">
@@ -259,39 +274,6 @@ function PredictionCard({ player }) {
           <ConfidenceBand low={pred?.score_low || 0} high={pred?.score_high || 50} color={ps.color} />
         </div>
       </div>
-
-      {/* Prior season stat badges */}
-      {available > 0 && (
-        <div className="stat-badges-section">
-          <div className="stat-badges-title">PRIOR SEASON OUTPUT (AVG 2024+2025)</div>
-          <div className="stat-badges-row">
-            {(has24 && b24?.matches > 0) || (has25 && b25?.matches > 0) ? (
-              <div className="stat-badge bat-badge">
-                <span className="stat-badge-val">
-                  {(((b24?.matches > 0 ? b24.runs / b24.matches : 0) + (b25?.matches > 0 ? b25.runs / b25.matches : 0)) /
-                    ((b24?.matches > 0 ? 1 : 0) + (b25?.matches > 0 ? 1 : 0)) || 0).toFixed(1)}
-                </span>
-                <span className="stat-badge-label">avg runs / match</span>
-                <span className="stat-badge-sub">
-                  {b24?.matches > 0 ? `2024: ${b24.runs}r` : '2024: —'} · {b25?.matches > 0 ? `2025: ${b25.runs}r` : '2025: —'}
-                </span>
-              </div>
-            ) : null}
-            {(has24 && w24?.matches > 0) || (has25 && w25?.matches > 0) ? (
-              <div className="stat-badge bowl-badge">
-                <span className="stat-badge-val">
-                  {(((w24?.matches > 0 ? w24.wickets / w24.matches : 0) + (w25?.matches > 0 ? w25.wickets / w25.matches : 0)) /
-                    ((w24?.matches > 0 ? 1 : 0) + (w25?.matches > 0 ? 1 : 0)) || 0).toFixed(2)}
-                </span>
-                <span className="stat-badge-label">avg wkts / match</span>
-                <span className="stat-badge-sub">
-                  {w24?.matches > 0 ? `2024: ${w24.wickets}w` : '2024: —'} · {w25?.matches > 0 ? `2025: ${w25.wickets}w` : '2025: —'}
-                </span>
-              </div>
-            ) : null}
-          </div>
-        </div>
-      )}
 
       <div className="prior-grid">
         <div className="prior-col">
