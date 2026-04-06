@@ -10,7 +10,7 @@ Live at: [powerplay-profits.vercel.app](https://powerplay-profits.vercel.app)
 
 Powerplay Profits ranks IPL players by the value they delivered relative to their auction price. The more a player delivers relative to what their franchise paid, the higher they rank.
 
-Three seasons covered — 2024 (complete), 2025 (complete), 2026 (live predictions).
+Four seasons covered: 2023 (compelte), 2024 (complete), 2025 (complete), 2026 (live predictions).
 
 ---
 
@@ -26,6 +26,7 @@ Economy is benchmarked against the season average — not a fixed number — so 
 
 | Season | Avg Economy |
 |--------|-------------|
+| 2023   | 8.74        |
 | 2024   | 8.90        |
 | 2025   | 9.10        |
 
