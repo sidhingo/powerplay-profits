@@ -963,7 +963,48 @@
      padding: 3px 9px;
      border-radius: 4px;
    }
-   
+   /* ── METHODOLOGY TOOLTIP ─────────────────────────────────────── */
+.method-tooltip-wrap {
+  position: relative;
+  cursor: help;
+  text-decoration: underline dotted rgba(255,255,255,0.3);
+  text-underline-offset: 3px;
+}
+
+.method-tooltip {
+  display: none;
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 0;
+  background: var(--surface3);
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  font-family: var(--f-mono);
+  font-size: 11px;
+  color: var(--text-2);
+  line-height: 1.9;
+  z-index: 50;
+  white-space: nowrap;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.method-tooltip strong {
+  display: block;
+  color: var(--text-3);
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  margin-bottom: 4px;
+}
+
+.method-tooltip span {
+  display: block;
+}
+
+.method-tooltip-wrap:hover .method-tooltip {
+  display: flex;
+}
    .method-caveat {
      font-family: var(--f-body);
      font-size: 14px;

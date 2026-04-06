@@ -3,6 +3,7 @@ import { SEASON_ECO } from '../utils/scoring';
 
 export default function Methodology({ season }) {
   const [open, setOpen] = useState(false);
+  const eco23 = SEASON_ECO[2023];
   const eco24 = SEASON_ECO[2024];
   const eco25 = SEASON_ECO[2025];
 
@@ -59,12 +60,16 @@ export default function Methodology({ season }) {
               <ul className="method-bullets">
                 <li>Wickets are the primary objective, economy is secondary.</li>
                 <li>Economy multiplier ranges from 0.6x (expensive) to 1.3x (economical).</li>
-                <li>Benchmarked per season — not a fixed cutoff.</li>
+                <li className="method-tooltip-wrap">
+                  Benchmarked per season — not a fixed cutoff.
+                  <span className="method-tooltip">
+                    <strong>Season avg economy</strong>
+                    <span>2023 — {eco23}</span>
+                    <span>2024 — {eco24}</span>
+                    <span>2025 — {eco25}</span>
+                  </span>
+                </li>
               </ul>
-              <div className="method-eco-row">
-                <span className="method-eco-pill">2024 avg eco: {eco24}</span>
-                <span className="method-eco-pill">2025 avg eco: {eco25}</span>
-              </div>
             </div>
 
             <div className="method-card">
@@ -79,7 +84,7 @@ export default function Methodology({ season }) {
               <ul className="method-bullets">
                 <li>Batting weighted slightly higher as it wins more T20 games.</li>
                 <li>15% bonus applies when SR is above 130 AND wickets reach 8 or more.</li>
-                <li>Rewards players doing two jobs from one roster slot.</li>
+                <li>Rewards players performing dual roles from one roster slot.</li>
               </ul>
             </div>
 

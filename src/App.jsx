@@ -21,7 +21,7 @@ const SEASONS = {
 const DEFAULT_FILTERS = { role: 'All', team: 'All', search: '', sort: 'score' };
 
 export default function App() {
-  const [season, setSeason] = useState(2024);
+  const [season, setSeason] = useState(2023);
   const [filters, setFilters] = useState(DEFAULT_FILTERS);
   const [view, setView] = useState('cards');
 
