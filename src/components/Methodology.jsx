@@ -61,7 +61,7 @@ export default function Methodology({ season }) {
                 <li>Wickets are the primary objective, economy is secondary.</li>
                 <li>Economy multiplier ranges from 0.6x (expensive) to 1.3x (economical).</li>
                 <li className="method-tooltip-wrap">
-                  Benchmarked per season — not a fixed cutoff.
+                  Benchmarked per season.
                   <span className="method-tooltip">
                     <strong>Season avg economy</strong>
                     <span>2023 — {eco23}</span>
