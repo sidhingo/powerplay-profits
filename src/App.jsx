@@ -46,27 +46,31 @@ export default function App() {
           <div className="live-banner">
             <span>⚡</span>
             <span>
-              <strong>IPL 2026 is live — started 28 March.</strong> Cards show predicted value tiers
-              based on averaged 2024 + 2025 form vs the 2026 auction price. The wider the confidence band,
-              the less prior data we have. Actuals unlock once the season ends in May.
+            <strong>IPL 2026 is live — started 28 March.</strong> Predictions are based on averaged 2023, 2024 and 2025 prior form vs the 2026 auction price. Live match stats shown on each card are informational only and do not affect the value scores. <strong>Stats last updated: April 8, 2026 — 14 matches played.</strong> Full season scores unlock in May.
             </span>
           </div>
         )}
 
-        <Methodology season={season} />
+<p className="site-intro">
+          In the IPL, every crore spent must yield results. This tool benchmarks auction price against
+          on-field impact to identify the season's greatest Steals and most Overpaid picks.
+        </p>
 
-        {season !== 2026 && <Highlights players={allPlayers} season={season} />}
+        <Methodology season={season} />
 
         <div className="controls">
           <FilterBar teams={teams} filters={filters} onChange={handleFilter} />
+        </div>
+
+        <div className="result-view-row">
+          <p className="result-count">{filtered.length} player{filtered.length !== 1 ? 's' : ''} shown</p>
           <div className="view-toggle">
-            <button className={`view-btn ${view === 'cards' ? 'active' : ''}`} onClick={() => setView('cards')}>CARDS</button>
-            <button className={`view-btn ${view === 'chart' ? 'active' : ''}`} onClick={() => setView('chart')}>SCATTER</button>
+            <button className={`view-btn ${view === 'cards' ? 'active' : ''}`} onClick={() => setView('cards')}>PLAYERS</button>
+            <button className={`view-btn ${view === 'chart' ? 'active' : ''}`} onClick={() => setView('chart')}>VALUE CHART</button>
           </div>
         </div>
 
-        <p className="result-count">{filtered.length} player{filtered.length !== 1 ? 's' : ''} shown</p>
-
+        
         {view === 'chart' ? (
           <BubbleChart players={filtered} season={season} />
         ) : (
