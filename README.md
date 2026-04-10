@@ -10,7 +10,7 @@ Live at: [powerplay-profits.vercel.app](https://powerplay-profits.vercel.app)
 
 Powerplay Profits ranks IPL players by the value they delivered relative to their auction price. The more a player delivers relative to what their franchise paid, the higher they rank.
 
-Four seasons covered: 2023 (compelte), 2024 (complete), 2025 (complete), 2026 (live predictions).
+Four seasons covered: 2023 (complete), 2024 (complete), 2025 (complete), 2026 (live predictions).
 
 ---
 
@@ -32,11 +32,11 @@ Economy is benchmarked against the season average — not a fixed number — so 
 
 **All-rounders**
 `55% batting + 45% bowling × dual-contribution bonus`
-A 15% bonus applies when SR ≥ 130 AND wickets ≥ 8. Rewards players doing two jobs from one roster slot.
+A 15% bonus applies when SR ≥ 130 AND wickets ≥ 8. Rewards players doing two roles from one roster slot.
 
 **Value Score**
 `contribution ÷ auction price (₹cr)`
-Normalised 0–100 across all players for the overall rank. Normalised separately within each role for the role rank.
+Normalized 0–100 across all players for the overall rank. Normalized separately within each role for the role rank.
 
 ---
 
@@ -53,7 +53,7 @@ Normalised 0–100 across all players for the overall rank. Normalised separatel
 
 ## 2026 Predictions
 
-2026 is mid-season. Predictions are derived from averaging each player's 2024 and 2025 contributions, divided by their 2026 auction price. Data pips on each card show how many prior seasons fed the model.
+2026 is mid-season. Predictions are derived from averaging each player's 2023, 2024, and 2025 contributions, divided by their 2026 auction price. Data pips on each card show how many prior seasons fed the model.
 
 ---
 
