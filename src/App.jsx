@@ -53,7 +53,7 @@ export default function App() {
 
 <p className="site-intro">
           In the IPL, every crore spent must yield results. This tool benchmarks auction price against
-          on-field impact to identify the season's greatest Steals and most Overpaid picks.
+          on-field impact to identify the season's greatest <i>Steals</i> and most <i>Overpaid</i> picks.
         </p>
 
         <Methodology season={season} />

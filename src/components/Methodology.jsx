@@ -23,10 +23,10 @@ export default function Methodology({ season }) {
               <div className="method-intro-sub">A value-for-money ranking of IPL auction spending</div>
             </div>
             <ul className="method-intro-bullets">
-              <li>The more a player delivers relative to what their franchise paid, the higher they rank.</li>
-              <li>Scores are calculated differently for batters, bowlers, and all-rounders based on their role.</li>
-              <li>Bowling economy is benchmarked against that season's average, and is not a fixed number, to ensure comparisons are fair across years.</li>
-              <li>2026 predictions use averaged 2024 and 2025 form divided by the new auction price.</li>
+              <li>The more a player delivers relative to what their franchise paid, the higher they rank</li>
+              <li>Scores are calculated differently for batters, bowlers, and all-rounders based on their role</li>
+              <li>Bowling economy is benchmarked against that season's average, and is not a fixed number, to ensure comparisons are fair across years</li>
+              <li>2026 predictions use averaged 2023, 2024, and 2025 form divided by the latest auction price</li>
             </ul>
           </div>
 
@@ -42,9 +42,9 @@ export default function Methodology({ season }) {
                 <span className="mf-chip" style={{ background: 'rgba(255,255,255,0.08)', color: '#c4bfb4' }}>availability</span>
               </div>
               <ul className="method-bullets">
-                <li>Rewards both volume and speed equally.</li>
-                <li>45 runs/match at SR 180 outscores 55 runs/match at SR 120.</li>
-                <li>Availability adjusts for players who missed games.</li>
+                <li>Rewards both volume and speed equally</li>
+                <li>45 runs/match at SR 180 outscores 55 runs/match at SR 120</li>
+                <li>Availability adjusts for players who missed games</li>
               </ul>
             </div>
 
@@ -58,10 +58,10 @@ export default function Methodology({ season }) {
                 <span className="mf-chip" style={{ background: 'rgba(255,255,255,0.08)', color: '#c4bfb4' }}>availability</span>
               </div>
               <ul className="method-bullets">
-                <li>Wickets are the primary objective, economy is secondary.</li>
-                <li>Economy multiplier ranges from 0.6x (expensive) to 1.3x (economical).</li>
+                <li>Wickets are the primary objective, economy is secondary</li>
+                <li>Economy multiplier ranges from 0.6x (expensive) to 1.3x (economical)</li>
                 <li className="method-tooltip-wrap">
-                  Benchmarked per season.
+                  Benchmarked per season
                   <span className="method-tooltip">
                     <strong>Season avg economy</strong>
                     <span>2023 — {eco23}</span>
@@ -82,9 +82,9 @@ export default function Methodology({ season }) {
                 <span className="mf-chip" style={{ background: 'rgba(255,255,255,0.08)', color: '#c4bfb4' }}>dual bonus</span>
               </div>
               <ul className="method-bullets">
-                <li>Batting weighted slightly higher as it wins more T20 games.</li>
-                <li>15% bonus applies when SR is above 130 AND wickets reach 8 or more.</li>
-                <li>Rewards players performing dual roles from one roster slot.</li>
+                <li>Batting weighted slightly higher as it wins more T20 games</li>
+                <li>15% bonus applies when SR is above 130 AND wickets reach 8 or more</li>
+                <li>Rewards players performing dual roles from one roster slot</li>
               </ul>
             </div>
 
@@ -97,9 +97,9 @@ export default function Methodology({ season }) {
                 <span className="mf-chip" style={{ background: 'rgba(249,115,22,0.15)', color: '#f97316' }}>auction price (cr)</span>
               </div>
               <ul className="method-bullets">
-                <li>The final output — divides contribution by what was paid.</li>
-                <li>Normalised 0-100 across all players for the overall rank.</li>
-                <li>Normalised separately within each role for the role rank.</li>
+                <li>The final output divides contribution by what was paid</li>
+                <li>Normalized 0-100 across all players for the overall rank</li>
+                <li>Normalized separately within each role for the role rank</li>
               </ul>
             </div>
 
