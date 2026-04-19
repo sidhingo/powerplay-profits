@@ -83,6 +83,8 @@ export default function App() {
         <div className="disclaimer">
           Powerplay Profits is a fan project. Stats sourced from ESPNCricinfo and public auction records.
           Not affiliated with the BCCI, IPL, or any franchise. Numbers don't capture everything. Cricket isn't a spreadsheet.
+          <br /><br />
+          Built by <a href="https://github.com/sidhingo" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-3)', textDecoration: 'underline' }}>sidhingo</a>
         </div>
       </main>
     </div>
