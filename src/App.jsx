@@ -24,6 +24,7 @@ export default function App() {
   const [season, setSeason] = useState(2023);
   const [filters, setFilters] = useState(DEFAULT_FILTERS);
   const [view, setView] = useState('cards');
+  const [contactSent, setContactSent] = useState(false);
 
   const { players: allPlayers } = SEASONS[season];
   const teams = useMemo(() => getTeams(allPlayers), [allPlayers]);
@@ -80,12 +81,39 @@ export default function App() {
           </div>
         )}
 
-        <div className="disclaimer">
-          Powerplay Profits is a fan project. Stats sourced from ESPNCricinfo and public auction records.
-          Not affiliated with the BCCI, IPL, or any franchise. Numbers don't capture everything. Cricket isn't a spreadsheet.
-          <br /><br />
-          Built by <a href="https://github.com/sidhingo" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-3)', textDecoration: 'underline' }}>sidhingo</a>
-        </div>
+<div className="mobile-banner">ⓘ Best experienced on desktop</div>
+
+<div className="footer-wrap">
+  <p className="footer-disclaimer">
+    Powerplay Profits is a fan project. Stats sourced from ESPNCricinfo and public auction records.
+    Not affiliated with the BCCI, IPL, or any franchise. Numbers don't capture everything. Cricket isn't a spreadsheet.
+  </p>
+
+  <div className="footer-contact">
+    <p className="footer-contact-label">Have feedback or a question? Drop a note below.</p>
+    <form
+      onSubmit={async (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const data = new FormData(form);
+        data.append('access_key', '598dea31-4d87-48f5-9bd9-4c6c318479cf');
+        data.append('subject', 'Powerplay Profits — Contact Form');
+        const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
+        if (res.ok) { setContactSent(true); form.reset(); }
+      }}
+      className="footer-form"
+    >
+      <input type="email" name="email" required placeholder="Your email" className="footer-input" />
+      <input type="text" name="message" required placeholder="Your message" className="footer-input footer-input-grow" />
+      <button type="submit" className="footer-btn">SEND</button>
+    </form>
+    {contactSent && <p className="footer-sent">Message received — thanks for reaching out.</p>}
+  </div>
+
+  <div className="footer-byline">
+    Built by <a href="https://github.com/sidhingo" target="_blank" rel="noopener noreferrer">sidhingo</a>
+  </div>
+</div>
       </main>
     </div>
   );

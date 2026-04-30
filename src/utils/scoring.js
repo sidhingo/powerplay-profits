@@ -112,12 +112,16 @@ export function computeIndex(players) {
     let contrib = 0;
 
     if (isLive) {
-      // Average 2024 + 2025 prior season contributions
+      // Average 2023 + 2024 + 2025 prior season contributions
+      const c23 = getContrib(p, p.prior_2023_batting, p.prior_2023_bowling, 2023);
       const c24 = getContrib(p, p.prior_2024_batting, p.prior_2024_bowling, 2024);
       const c25 = getContrib(p, p.prior_2025_batting, p.prior_2025_bowling, 2025);
+      const has23 = c23 > 0;
       const has24 = c24 > 0;
       const has25 = c25 > 0;
-      contrib = (has24 && has25) ? (c24 + c25) / 2 : has24 ? c24 : has25 ? c25 : 0;
+      const total = (has23 ? c23 : 0) + (has24 ? c24 : 0) + (has25 ? c25 : 0);
+      const count = (has23 ? 1 : 0) + (has24 ? 1 : 0) + (has25 ? 1 : 0);
+      contrib = count > 0 ? total / count : 0;
     } else {
       contrib = getContrib(p, p.batting, p.bowling, season);
     }
@@ -125,15 +129,17 @@ export function computeIndex(players) {
     const price = Math.max(p.auction_price_cr, 0.10);
 
     // Individual component scores for contribution bars
+    const priorBatCount = isLive ? ([(p.prior_2023_batting?.matches||0)>0,(p.prior_2024_batting?.matches||0)>0,(p.prior_2025_batting?.matches||0)>0].filter(Boolean).length||1) : 1;
+    const priorBowlCount = isLive ? ([(p.prior_2023_bowling?.wickets||0)>0,(p.prior_2024_bowling?.wickets||0)>0,(p.prior_2025_bowling?.wickets||0)>0].filter(Boolean).length||1) : 1;
     const batSrcFinal  = isLive
-      ? { matches: ((p.prior_2024_batting?.matches||0) + (p.prior_2025_batting?.matches||0)) / 2,
-          runs: ((p.prior_2024_batting?.runs||0) + (p.prior_2025_batting?.runs||0)) / 2,
-          strike_rate: ((p.prior_2024_batting?.strike_rate||0) + (p.prior_2025_batting?.strike_rate||0)) / 2 }
+      ? { matches: ((p.prior_2023_batting?.matches||0)+(p.prior_2024_batting?.matches||0)+(p.prior_2025_batting?.matches||0))/priorBatCount,
+          runs: ((p.prior_2023_batting?.runs||0)+(p.prior_2024_batting?.runs||0)+(p.prior_2025_batting?.runs||0))/priorBatCount,
+          strike_rate: ((p.prior_2023_batting?.strike_rate||0)+(p.prior_2024_batting?.strike_rate||0)+(p.prior_2025_batting?.strike_rate||0))/priorBatCount }
       : p.batting;
     const bowlSrcFinal = isLive
-      ? { matches: ((p.prior_2024_bowling?.matches||0) + (p.prior_2025_bowling?.matches||0)) / 2,
-          wickets: ((p.prior_2024_bowling?.wickets||0) + (p.prior_2025_bowling?.wickets||0)) / 2,
-          economy: ((p.prior_2024_bowling?.economy||0) + (p.prior_2025_bowling?.economy||0)) / 2 }
+      ? { matches: ((p.prior_2023_bowling?.matches||0)+(p.prior_2024_bowling?.matches||0)+(p.prior_2025_bowling?.matches||0))/priorBowlCount,
+          wickets: ((p.prior_2023_bowling?.wickets||0)+(p.prior_2024_bowling?.wickets||0)+(p.prior_2025_bowling?.wickets||0))/priorBowlCount,
+          economy: ((p.prior_2023_bowling?.economy||0)+(p.prior_2024_bowling?.economy||0)+(p.prior_2025_bowling?.economy||0))/priorBowlCount }
       : p.bowling;
 
     const batScore  = +batterContrib(batSrcFinal,  isLive ? 2025 : season).toFixed(4);
