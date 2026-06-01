@@ -15,7 +15,6 @@ export default function Header({ season, onSeason }) {
                 onClick={() => onSeason(y)}
               >
                 {y}
-                {y === 2026 && <span className="live-dot" title="Season in progress" />}
               </button>
             ))}
           </nav>

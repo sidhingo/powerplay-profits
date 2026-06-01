@@ -4,8 +4,6 @@ import TeamCrest from './TeamCrest';
 import CountryFlag from './CountryFlag';
 
 const SEASON_MED_PRICE = { 2023: 7, 2024: 7, 2025: 13, 2026: 11 };
-
-// Season average SR for batters — used for context comparison
 const SEASON_AVG_SR = { 2023: 138, 2024: 142, 2025: 145, 2026: 143 };
 
 /* ── Value score block ──────────────────────────────────────── */
@@ -78,6 +76,58 @@ function ContextRow({ label, playerVal, seasonVal, unit = '', higherIsBetter = t
       <span className="ctx-val">{playerVal}{unit}</span>
       <span className="ctx-vs">vs {seasonVal}{unit} avg</span>
       <span className="ctx-diff" style={{ color }}>{sign}{diff}{unit}</span>
+    </div>
+  );
+}
+
+/* ── Prediction review panel (2026 completed cards only) ────── */
+function PredictionReview({ pred, verdictCls, verdictLabel }) {
+  const predStyle =
+    pred.tier === 'LIKELY STEAL'
+      ? { bg: 'var(--emerald-d)', color: '#22c55e', border: 'rgba(34,197,94,0.3)' }
+    : pred.tier === 'LIKELY OVERPAID'
+      ? { bg: 'var(--coral-d)',   color: '#f87171', border: 'rgba(248,113,113,0.3)' }
+    : pred.tier === 'FAIR VALUE'
+      ? { bg: 'var(--amber-d)',   color: '#f59e0b', border: 'rgba(245,158,11,0.3)' }
+    :   { bg: 'var(--sky-d)',     color: '#38bdf8', border: 'rgba(56,189,248,0.3)' };
+
+  const actualStyle =
+    verdictCls === 'v-steal' ? { bg: 'var(--emerald-d)', color: '#22c55e', border: 'rgba(34,197,94,0.3)' }
+    : verdictCls === 'v-fair'  ? { bg: 'var(--amber-d)',   color: '#f59e0b', border: 'rgba(245,158,11,0.3)' }
+    : verdictCls === 'v-cheap' ? { bg: 'rgba(122,117,104,0.12)', color: '#9ca3af', border: 'rgba(122,117,104,0.25)' }
+    :                            { bg: 'var(--coral-d)',   color: '#f87171', border: 'rgba(248,113,113,0.3)' };
+
+  const hit =
+    (pred.tier === 'LIKELY STEAL'    && (verdictCls === 'v-steal' || verdictCls === 'v-fair')) ||
+    (pred.tier === 'LIKELY OVERPAID' && (verdictCls === 'v-over'  || verdictCls === 'v-cheap')) ||
+    (pred.tier === 'FAIR VALUE'      && (verdictCls === 'v-fair'  || verdictCls === 'v-steal')) ||
+    (pred.tier === 'WATCH'           && verdictCls !== 'v-steal');
+
+  const outcomeColor = hit ? '#22c55e' : '#f87171';
+  const outcomeLabel = hit ? 'Prediction aligned with final verdict' : 'Prediction did not match final verdict';
+
+  return (
+    <div className="pred-review">
+      <div className="pred-review-header">PRE-SEASON PREDICTION REVIEW</div>
+      <div className="pred-review-grid">
+        <div>
+          <div className="pred-review-label">PREDICTED</div>
+          <div className="pred-review-badge" style={{ background: predStyle.bg, color: predStyle.color, border: `1px solid ${predStyle.border}` }}>
+            {pred.tier}
+          </div>
+          <div className="pred-review-conf">{pred.confidence}% confidence</div>
+        </div>
+        <div>
+          <div className="pred-review-label">ACTUAL</div>
+          <div className="pred-review-badge" style={{ background: actualStyle.bg, color: actualStyle.color, border: `1px solid ${actualStyle.border}` }}>
+            {verdictLabel}
+          </div>
+        </div>
+      </div>
+      <div className="pred-review-outcome">
+        <div className="pred-review-dot" style={{ background: outcomeColor }} />
+        <span style={{ color: outcomeColor }}>{outcomeLabel}</span>
+      </div>
     </div>
   );
 }
@@ -192,6 +242,15 @@ function CompleteCard({ player }) {
           )}
         </div>
       </div>
+
+      {/* 2026 prediction review panel */}
+      {player.season === 2026 && player.prediction && (
+        <PredictionReview
+          pred={player.prediction}
+          verdictCls={verdict.cls}
+          verdictLabel={verdict.label}
+        />
+      )}
     </div>
   );
 }
@@ -217,18 +276,20 @@ function ConfidenceBand({ low, high, color }) {
 /* ── Data pips ──────────────────────────────────────────────── */
 function DataPips({ available }) {
   const label =
+    available === 3 ? '3 seasons of data' :
     available === 2 ? '2 seasons of data' :
     available === 1 ? '1 season of data'  : 'no prior IPL data';
   return (
     <div className="pips">
       <span className={`pip ${available >= 1 ? 'pip-on' : 'pip-off'}`} />
       <span className={`pip ${available >= 2 ? 'pip-on' : 'pip-off'}`} />
+      <span className={`pip ${available >= 3 ? 'pip-on' : 'pip-off'}`} />
       <span className="pip-text">{label}</span>
     </div>
   );
 }
 
-/* ── Prediction card (2026) ─────────────────────────────────── */
+/* ── Prediction card (2026 in-progress only) ────────────────── */
 function PredictionCard({ player }) {
   const tc        = TEAM_COLORS[player.team] || '#555';
   const rc        = ROLE_COLORS[player.role]  || '#888';

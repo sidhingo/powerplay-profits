@@ -3,7 +3,7 @@ import players2023 from './data/players_2023.json';
 import players2024 from './data/players_2024.json';
 import players2025 from './data/players_2025.json';
 import players2026 from './data/players_2026.json';
-import { computeIndex, filterPlayers, getTeams } from './utils/scoring';
+import { computeIndex, filterPlayers, getTeams, getVerdict } from './utils/scoring';
 import Header      from './components/Header';
 import FilterBar   from './components/FilterBar';
 import PlayerCard  from './components/PlayerCard';
@@ -15,23 +15,44 @@ const SEASONS = {
   2023: { players: computeIndex(players2023), status: 'complete' },
   2024: { players: computeIndex(players2024), status: 'complete' },
   2025: { players: computeIndex(players2025), status: 'complete' },
-  2026: { players: computeIndex(players2026), status: 'in_progress' },
+  2026: { players: computeIndex(players2026), status: 'complete' },
 };
 
 const DEFAULT_FILTERS = { role: 'All', team: 'All', search: '', sort: 'score' };
 
 export default function App() {
-  const [season, setSeason] = useState(2023);
-  const [filters, setFilters] = useState(DEFAULT_FILTERS);
-  const [view, setView] = useState('cards');
+  const [season, setSeason]         = useState(2023);
+  const [filters, setFilters]       = useState(DEFAULT_FILTERS);
+  const [view, setView]             = useState('cards');
   const [contactSent, setContactSent] = useState(false);
+  const [predFilter, setPredFilter]   = useState(null);
 
   const { players: allPlayers } = SEASONS[season];
   const teams = useMemo(() => getTeams(allPlayers), [allPlayers]);
 
+  const predictionSummary = useMemo(() => {
+    if (season !== 2026) return null;
+    const tracked = allPlayers.filter(p => !p.standout && p.prediction);
+    let hit = 0, missed = 0;
+    tracked.forEach(p => {
+      const v    = getVerdict(p.global_score, p.auction_price_cr, 11);
+      const tier = p.prediction.tier;
+      const cls  = v.cls;
+      const isHit =
+        (tier === 'LIKELY STEAL'    && (cls === 'v-steal' || cls === 'v-fair')) ||
+        (tier === 'LIKELY OVERPAID' && (cls === 'v-over'  || cls === 'v-cheap')) ||
+        (tier === 'FAIR VALUE'      && (cls === 'v-fair'  || cls === 'v-over')) ||
+        (tier === 'WATCH'           && cls !== 'v-steal');
+      if (isHit) hit++;
+      else missed++;
+    });
+    return { hit, missed, total: tracked.length };
+  }, [season, allPlayers]);
+
   const handleSeason = (s) => {
     setSeason(s);
     setFilters(DEFAULT_FILTERS);
+    setPredFilter(null);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
   const handleFilter = (patch) => setFilters(f => ({ ...f, ...patch }));
@@ -43,18 +64,40 @@ export default function App() {
       <Header season={season} onSeason={handleSeason} />
 
       <main className="main">
+
         {season === 2026 && (
-          <div className="live-banner">
-            <span>⚡</span>
-            <span>
-            <strong>IPL 2026 is live — started 28 March.</strong> Predictions are based on averaged 2023, 2024 and 2025 prior form vs the 2026 auction price. Live match stats shown on each card are informational only and do not affect the value scores. <strong>Stats last updated: April 8, 2026 — 14 matches played.</strong> Full season scores unlock in May.
-            </span>
-          </div>
+          <>
+            <div className="season-complete-banner">
+              🏆 <strong>IPL 2026 Complete — RCB retain the title.</strong> Final scores, verdicts and pre-season prediction reviews are now live across all 50 tracked players.
+            </div>
+            {predictionSummary && (
+              <div className="pred-summary-strip">
+                <button
+                  className={`pred-summary-item pred-summary-btn ${predFilter === 'hit' ? 'pred-summary-active' : ''}`}
+                  onClick={() => setPredFilter(f => f === 'hit' ? null : 'hit')}
+                >
+                  <span className="pred-summary-num" style={{ color: '#22c55e' }}>{predictionSummary.hit}</span>
+                  <span className="pred-summary-label">PREDICTIONS HIT</span>
+                </button>
+                <div className="pred-summary-divider" />
+                <button
+                  className={`pred-summary-item pred-summary-btn ${predFilter === 'missed' ? 'pred-summary-active' : ''}`}
+                  onClick={() => setPredFilter(f => f === 'missed' ? null : 'missed')}
+                >
+                  <span className="pred-summary-num" style={{ color: '#f87171' }}>{predictionSummary.missed}</span>
+                  <span className="pred-summary-label">PREDICTIONS MISSED</span>
+                </button>
+                <div className="pred-summary-note">
+                  Pre-season predictions vs final verdicts: assessed across {predictionSummary.total} players before a ball was bowled.
+                </div>
+              </div>
+            )}
+            </>
         )}
 
-<p className="site-intro">
+        <p className="site-intro">
           In the IPL, every crore spent must yield results. This tool benchmarks auction price against
-          on-field impact to identify the season's greatest <i>Steals</i> and most <i>Overpaid</i> picks.
+          on-field impact to identify the season's greatest Steals and most Overpaid picks.
         </p>
 
         <Methodology season={season} />
@@ -64,56 +107,88 @@ export default function App() {
         </div>
 
         <div className="result-view-row">
-          <p className="result-count">{filtered.length} player{filtered.length !== 1 ? 's' : ''} shown</p>
+          <p className="result-count">
+            {season === 2026
+              ? `50 tracked + 9 standouts`
+              : `${filtered.length} player${filtered.length !== 1 ? 's' : ''} shown`}
+          </p>
           <div className="view-toggle">
             <button className={`view-btn ${view === 'cards' ? 'active' : ''}`} onClick={() => setView('cards')}>PLAYERS</button>
             <button className={`view-btn ${view === 'chart' ? 'active' : ''}`} onClick={() => setView('chart')}>VALUE CHART</button>
           </div>
         </div>
 
-        
-        {view === 'chart' ? (
-          <BubbleChart players={filtered} season={season} />
+        {season !== 2026 && <Highlights players={filtered} season={season} />}
+
+        {season === 2026 && view === 'cards' && (
+          <>
+            <div className="standout-section">
+              <div className="standout-banner">
+                ✦ Season Standouts — these players were not part of the original tracked cohort. Either retained at base price, uncapped at auction, or signed as replacements. Their on-field output in 2026 earned a place in the data.
+              </div>
+              <div className="cards-grid">
+                {allPlayers.filter(p => p.standout).map(p => <PlayerCard key={p.id} player={p} />)}
+              </div>
+            </div>
+            <div className="standout-divider" />
+            <div className="cohort-banner">
+              ◎ Original tracked cohort — 50 players selected at the 2026 auction based on price and projected impact. Each card includes a pre-season prediction review.
+            </div>
+          </>
+        )}
+
+{view === 'chart' ? (
+          <BubbleChart players={filtered.filter(p => !p.standout)} season={season} />
         ) : (
           <div className="cards-grid">
-            {filtered.map(p => <PlayerCard key={p.id} player={p} />)}
-            {filtered.length === 0 && <div className="empty">No players match these filters.</div>}
+            {filtered.filter(p => !p.standout).filter(p => {
+              if (season !== 2026 || !predFilter || !p.prediction) return true;
+              const v = getVerdict(p.global_score, p.auction_price_cr, 11);
+              const cls = v.cls;
+              const tier = p.prediction.tier;
+              const isHit =
+                (tier === 'LIKELY STEAL'    && (cls === 'v-steal' || cls === 'v-fair')) ||
+                (tier === 'LIKELY OVERPAID' && (cls === 'v-over'  || cls === 'v-cheap')) ||
+                (tier === 'FAIR VALUE'      && (cls === 'v-fair'  || cls === 'v-over')) ||
+                (tier === 'WATCH'           && cls !== 'v-steal');
+              return predFilter === 'hit' ? isHit : !isHit;
+            }).map(p => <PlayerCard key={p.id} player={p} />)}
+            {filtered.filter(p => !p.standout).length === 0 && <div className="empty">No players match these filters.</div>}
           </div>
         )}
 
-<div className="mobile-banner">ⓘ Best experienced on desktop</div>
+        <div className="mobile-banner">ⓘ Best experienced on desktop</div>
 
-<div className="footer-wrap">
-  <p className="footer-disclaimer">
-    Powerplay Profits is a fan project. Stats sourced from ESPNCricinfo and public auction records.
-    Not affiliated with the BCCI, IPL, or any franchise. Numbers don't capture everything. Cricket isn't a spreadsheet.
-  </p>
+        <div className="footer-wrap">
+          <p className="footer-disclaimer">
+            Powerplay Profits is a fan project. Stats sourced from ESPNCricinfo and public auction records.
+            Not affiliated with the BCCI, IPL, or any franchise. Numbers don't capture everything. Cricket isn't a spreadsheet.
+          </p>
+          <div className="footer-contact">
+            <p className="footer-contact-label">Have feedback or a question? Drop a note below.</p>
+            <form
+              onSubmit={async (e) => {
+                e.preventDefault();
+                const form = e.target;
+                const data = new FormData(form);
+                data.append('access_key', '598dea31-4d87-48f5-9bd9-4c6c318479cf');
+                data.append('subject', 'Powerplay Profits — Contact Form');
+                const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
+                if (res.ok) { setContactSent(true); form.reset(); }
+              }}
+              className="footer-form"
+            >
+              <input type="email" name="email" required placeholder="Your email" className="footer-input" />
+              <input type="text" name="message" required placeholder="Your message" className="footer-input footer-input-grow" />
+              <button type="submit" className="footer-btn">SEND</button>
+            </form>
+            {contactSent && <p className="footer-sent">Message received. Thanks for reaching out.</p>}
+          </div>
+          <div className="footer-byline">
+            Built by <a href="https://github.com/sidhingo" target="_blank" rel="noopener noreferrer">sidhingo</a>
+          </div>
+        </div>
 
-  <div className="footer-contact">
-    <p className="footer-contact-label">Have feedback or a question? Drop a note below.</p>
-    <form
-      onSubmit={async (e) => {
-        e.preventDefault();
-        const form = e.target;
-        const data = new FormData(form);
-        data.append('access_key', '598dea31-4d87-48f5-9bd9-4c6c318479cf');
-        data.append('subject', 'Powerplay Profits — Contact Form');
-        const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
-        if (res.ok) { setContactSent(true); form.reset(); }
-      }}
-      className="footer-form"
-    >
-      <input type="email" name="email" required placeholder="Your email" className="footer-input" />
-      <input type="text" name="message" required placeholder="Your message" className="footer-input footer-input-grow" />
-      <button type="submit" className="footer-btn">SEND</button>
-    </form>
-    {contactSent && <p className="footer-sent">Message received — thanks for reaching out.</p>}
-  </div>
-
-  <div className="footer-byline">
-    Built by <a href="https://github.com/sidhingo" target="_blank" rel="noopener noreferrer">sidhingo</a>
-  </div>
-</div>
       </main>
     </div>
   );
