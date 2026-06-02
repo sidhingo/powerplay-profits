@@ -11,11 +11,27 @@ import BubbleChart from './components/BubbleChart';
 import Methodology from './components/Methodology';
 import Highlights  from './components/Highlights';
 
+const scored2026    = computeIndex(players2026.filter(p => !p.standout));
+const standoutBatters2026 = computeIndex(
+  players2026.filter(p => p.standout && p.role === 'Batter')
+);
+const standoutBowlers2026 = computeIndex(
+  players2026.filter(p => p.standout && p.role === 'Bowler')
+);
+const standoutAllRounders2026 = computeIndex(
+  players2026.filter(p => p.standout && p.role === 'All-rounder')
+);
+const standouts2026 = [
+  ...standoutBatters2026,
+  ...standoutBowlers2026,
+  ...standoutAllRounders2026,
+].map(p => ({ ...p, standout: true }));
+
 const SEASONS = {
   2023: { players: computeIndex(players2023), status: 'complete' },
   2024: { players: computeIndex(players2024), status: 'complete' },
   2025: { players: computeIndex(players2025), status: 'complete' },
-  2026: { players: computeIndex(players2026), status: 'complete' },
+  2026: { players: [...scored2026, ...standouts2026], status: 'complete' },
 };
 
 const DEFAULT_FILTERS = { role: 'All', team: 'All', search: '', sort: 'score' };
@@ -36,8 +52,8 @@ export default function App() {
     let hit = 0, missed = 0;
     tracked.forEach(p => {
       const tier = p.prediction.tier;
-      const medPrice = 11;
-      const v = getVerdict(p.global_score, p.auction_price_cr, medPrice);
+      const medPrice = 13.2;
+      const v = getVerdict(p.global_score, p.auction_price_cr, 13.2, 10.1);
       const cls = v.cls;
       let isHit = false;
       if (tier === 'LIKELY STEAL') {
@@ -115,7 +131,7 @@ export default function App() {
         <div className="result-view-row">
           <p className="result-count">
             {season === 2026
-              ? `50 tracked + 9 standouts`
+              ? `50 tracked + 6 standouts`
               : `${filtered.length} player${filtered.length !== 1 ? 's' : ''} shown`}
           </p>
           <div className="view-toggle">
@@ -123,8 +139,6 @@ export default function App() {
             <button className={`view-btn ${view === 'chart' ? 'active' : ''}`} onClick={() => setView('chart')}>VALUE CHART</button>
           </div>
         </div>
-
-        {season !== 2026 && <Highlights players={filtered} season={season} />}
 
         {season === 2026 && view === 'cards' && (
           <>
@@ -140,8 +154,11 @@ export default function App() {
             <div className="cohort-banner">
               ◎ Original tracked cohort — 50 players selected at the 2026 auction based on price and projected impact. Each card includes a pre-season prediction review.
             </div>
+            <Highlights players={filtered.filter(p => !p.standout)} season={season} />
           </>
         )}
+
+        {season !== 2026 && <Highlights players={filtered} season={season} />}
 
 {view === 'chart' ? (
           <BubbleChart players={filtered.filter(p => !p.standout)} season={season} />
@@ -151,7 +168,7 @@ export default function App() {
               if (season !== 2026 || !predFilter || !p.prediction) return true;
               const tier = p.prediction.tier;
               const medPrice = 11;
-              const v = getVerdict(p.global_score, p.auction_price_cr, medPrice);
+              const v = getVerdict(p.global_score, p.auction_price_cr, 13.2, 10.1);
               const cls = v.cls;
               let isHit = false;
               if (tier === 'LIKELY STEAL') {

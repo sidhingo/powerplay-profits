@@ -740,26 +740,5 @@
     "standout_note": "These players were not part of the original tracked cohort — either retained at base price, uncapped, or signed as replacements. Their on-field output in 2026 earned a place in the data.",
     "batting": { "matches": 14, "runs": 349, "strike_rate": 214.11, "average": 29.08 },
     "bowling": { "matches": 0, "wickets": 0, "economy": 0, "average": 0 }
-  },
-  {
-    "id": 307, "name": "Dhruv Jurel", "team": "RR", "role": "Batter", "nationality": "India",
-    "auction_price_cr": 14.0, "season": 2026, "season_status": "complete", "standout": true,
-    "standout_note": "These players were not part of the original tracked cohort — either retained at base price, uncapped, or signed as replacements. Their on-field output in 2026 earned a place in the data.",
-    "batting": { "matches": 16, "runs": 515, "strike_rate": 162.46, "average": 42.92 },
-    "bowling": { "matches": 0, "wickets": 0, "economy": 0, "average": 0 }
-  },
-  {
-    "id": 308, "name": "Mitchell Marsh", "team": "LSG", "role": "All-rounder", "nationality": "Australia",
-    "auction_price_cr": 7.5, "season": 2026, "season_status": "complete", "standout": true,
-    "standout_note": "These players were not part of the original tracked cohort — either retained at base price, uncapped, or signed as replacements. Their on-field output in 2026 earned a place in the data.",
-    "batting": { "matches": 14, "runs": 563, "strike_rate": 163.66, "average": 46.92 },
-    "bowling": { "matches": 14, "wickets": 8, "economy": 9.88, "average": 34.75 }
-  },
-  {
-    "id": 309, "name": "Eshan Malinga", "team": "SRH", "role": "Bowler", "nationality": "Sri Lanka",
-    "auction_price_cr": 1.5, "season": 2026, "season_status": "complete", "standout": true,
-    "standout_note": "These players were not part of the original tracked cohort — either retained at base price, uncapped, or signed as replacements. Their on-field output in 2026 earned a place in the data.",
-    "batting": { "matches": 14, "runs": 6, "strike_rate": 50.0, "average": 1.5 },
-    "bowling": { "matches": 14, "wickets": 20, "economy": 8.58, "average": 17.15 }
   }
-]
+  ]

@@ -187,8 +187,8 @@ export function computeIndex(players) {
 
 // ── Verdict helpers ─────────────────────────────────────────────
 
-export function getVerdict(globalScore, auctionPrice, medianPrice) {
-  const highScore = globalScore >= 50;
+export function getVerdict(globalScore, auctionPrice, medianPrice, scoreMedian = 10.1) {
+  const highScore = globalScore >= scoreMedian;
   const highPrice = auctionPrice >= medianPrice;
 
   if  (highScore && !highPrice) return { label: 'STEAL',    cls: 'v-steal' };

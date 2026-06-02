@@ -3,7 +3,8 @@ import { getVerdict, PREDICTION_STYLES, SEASON_ECO } from '../utils/scoring';
 import TeamCrest from './TeamCrest';
 import CountryFlag from './CountryFlag';
 
-const SEASON_MED_PRICE = { 2023: 7, 2024: 7, 2025: 13, 2026: 11 };
+const SEASON_MED_PRICE  = { 2023: 7, 2024: 7, 2025: 13, 2026: 13.2 };
+const SEASON_MED_SCORE  = { 2023: 2.8, 2024: 1.0, 2025: 10.1, 2026: 10.1 };
 const SEASON_AVG_SR = { 2023: 138, 2024: 142, 2025: 145, 2026: 143 };
 
 /* ── Value score block ──────────────────────────────────────── */
@@ -15,16 +16,19 @@ function ValueBlock({ player, verdictCls, verdictLabel, color }) {
           <div className="value-label">VALUE SCORE</div>
           <div className="value-num" style={{ color }}>{player.global_score}</div>
         </div>
-        <div className="value-ranks">
-          <div className="value-rank-line">
-            <span className="value-rank-num">#{player.global_rank}</span>
-            <span className="value-rank-sub">overall</span>
+        {!player.standout && (
+          <div className="value-ranks">
+            <div className="value-rank-line">
+              <span className="value-rank-num">#{player.global_rank}</span>
+              <span className="value-rank-sub">overall</span>
+            </div>
+            <div className="value-rank-line">
+              <span className="value-rank-num">#{player.role_rank}</span>
+              <span className="value-rank-sub">among {player.role.toLowerCase()}s</span>
+            </div>
           </div>
-          <div className="value-rank-line">
-            <span className="value-rank-num">#{player.role_rank}</span>
-            <span className="value-rank-sub">among {player.role.toLowerCase()}s</span>
-          </div>
-        </div>
+        )}
+        {player.standout && <div className="value-ranks" />}
         <div className={`verdict ${verdictCls}`}>{verdictLabel}</div>
       </div>
       <div className="value-bar-track">
@@ -64,11 +68,11 @@ function CardHeader({ player, teamColor, roleColor }) {
 }
 
 /* ── Context comparison row ─────────────────────────────────── */
-function ContextRow({ label, playerVal, seasonVal, unit = '', higherIsBetter = true }) {
+function ContextRow({ label, playerVal, seasonVal, unit = '', higherIsBetter = true, forceGreen = false }) {
   if (!playerVal || playerVal === 0) return null;
   const diff = +(playerVal - seasonVal).toFixed(2);
   const better = higherIsBetter ? diff > 0 : diff < 0;
-  const color = better ? '#22c55e' : diff === 0 ? '#7a7568' : '#f87171';
+  const color = forceGreen ? '#22c55e' : better ? '#22c55e' : diff === 0 ? '#7a7568' : '#f87171';
   const sign = diff > 0 ? '+' : '';
   return (
     <div className="ctx-row">
@@ -138,7 +142,8 @@ function CompleteCard({ player }) {
   const rc        = ROLE_COLORS[player.role]  || '#888';
   const season    = player.season;
   const medPrice  = SEASON_MED_PRICE[season] || 10;
-  const verdict   = getVerdict(player.global_score, player.auction_price_cr, medPrice);
+  const medScore = SEASON_MED_SCORE[season] || 10.1;
+const verdict  = getVerdict(player.global_score, player.auction_price_cr, medPrice, medScore);
   const bat       = player.batting;
   const bowl      = player.bowling;
   const seasonEco = SEASON_ECO[season] || 9.0;
@@ -179,7 +184,7 @@ function CompleteCard({ player }) {
             VS SEASON AVERAGE
             {hasDual && <span className="dual-bonus-badge">+15% DUAL BONUS</span>}
           </div>
-          {showBatCtx && (
+          {showBatCtx && player.role !== 'Bowler' && (
             <ContextRow
               label="Strike Rate"
               playerVal={bat.strike_rate}
@@ -193,6 +198,7 @@ function CompleteCard({ player }) {
               playerVal={bowl.economy}
               seasonVal={seasonEco}
               higherIsBetter={false}
+              forceGreen={player.standout}
             />
           )}
           {showBowlCtx && (
@@ -201,6 +207,7 @@ function CompleteCard({ player }) {
               playerVal={+(bowl.wickets / bowl.matches).toFixed(2)}
               seasonVal={1.0}
               higherIsBetter={true}
+              forceGreen={player.standout}
             />
           )}
         </div>
