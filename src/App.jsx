@@ -35,14 +35,20 @@ export default function App() {
     const tracked = allPlayers.filter(p => !p.standout && p.prediction);
     let hit = 0, missed = 0;
     tracked.forEach(p => {
-      const v    = getVerdict(p.global_score, p.auction_price_cr, 11);
       const tier = p.prediction.tier;
-      const cls  = v.cls;
-      const isHit =
-        (tier === 'LIKELY STEAL'    && (cls === 'v-steal' || cls === 'v-fair')) ||
-        (tier === 'LIKELY OVERPAID' && (cls === 'v-over'  || cls === 'v-cheap')) ||
-        (tier === 'FAIR VALUE'      && (cls === 'v-fair'  || cls === 'v-over')) ||
-        (tier === 'WATCH'           && cls !== 'v-steal');
+      const medPrice = 11;
+      const v = getVerdict(p.global_score, p.auction_price_cr, medPrice);
+      const cls = v.cls;
+      let isHit = false;
+      if (tier === 'LIKELY STEAL') {
+        isHit = cls === 'v-steal' || cls === 'v-fair';
+      } else if (tier === 'LIKELY OVERPAID') {
+        isHit = cls === 'v-over' || cls === 'v-cheap';
+      } else if (tier === 'FAIR VALUE') {
+        isHit = cls === 'v-fair' || cls === 'v-over';
+      } else if (tier === 'WATCH') {
+        isHit = cls === 'v-cheap' || cls === 'v-over' || cls === 'v-fair';
+      }
       if (isHit) hit++;
       else missed++;
     });
@@ -88,8 +94,8 @@ export default function App() {
                   <span className="pred-summary-label">PREDICTIONS MISSED</span>
                 </button>
                 <div className="pred-summary-note">
-                  Pre-season predictions vs final verdicts: assessed across {predictionSummary.total} players before a ball was bowled.
-                </div>
+                Pre-season predictions vs final verdicts: assessed across {predictionSummary.total} players before a ball was bowled.
+                              </div>
               </div>
             )}
             </>
@@ -143,14 +149,20 @@ export default function App() {
           <div className="cards-grid">
             {filtered.filter(p => !p.standout).filter(p => {
               if (season !== 2026 || !predFilter || !p.prediction) return true;
-              const v = getVerdict(p.global_score, p.auction_price_cr, 11);
-              const cls = v.cls;
               const tier = p.prediction.tier;
-              const isHit =
-                (tier === 'LIKELY STEAL'    && (cls === 'v-steal' || cls === 'v-fair')) ||
-                (tier === 'LIKELY OVERPAID' && (cls === 'v-over'  || cls === 'v-cheap')) ||
-                (tier === 'FAIR VALUE'      && (cls === 'v-fair'  || cls === 'v-over')) ||
-                (tier === 'WATCH'           && cls !== 'v-steal');
+              const medPrice = 11;
+              const v = getVerdict(p.global_score, p.auction_price_cr, medPrice);
+              const cls = v.cls;
+              let isHit = false;
+              if (tier === 'LIKELY STEAL') {
+                isHit = cls === 'v-steal' || cls === 'v-fair';
+              } else if (tier === 'LIKELY OVERPAID') {
+                isHit = cls === 'v-over' || cls === 'v-cheap';
+              } else if (tier === 'FAIR VALUE') {
+                isHit = cls === 'v-fair' || cls === 'v-over';
+              } else if (tier === 'WATCH') {
+                isHit = cls === 'v-cheap' || cls === 'v-over' || cls === 'v-fair';
+              }
               return predFilter === 'hit' ? isHit : !isHit;
             }).map(p => <PlayerCard key={p.id} player={p} />)}
             {filtered.filter(p => !p.standout).length === 0 && <div className="empty">No players match these filters.</div>}

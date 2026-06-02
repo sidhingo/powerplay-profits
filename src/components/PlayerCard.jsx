@@ -81,7 +81,7 @@ function ContextRow({ label, playerVal, seasonVal, unit = '', higherIsBetter = t
 }
 
 /* ── Prediction review panel (2026 completed cards only) ────── */
-function PredictionReview({ pred, verdictCls, verdictLabel }) {
+function PredictionReview({ pred, verdictCls, verdictLabel, actual, player_price }) {
   const predStyle =
     pred.tier === 'LIKELY STEAL'
       ? { bg: 'var(--emerald-d)', color: '#22c55e', border: 'rgba(34,197,94,0.3)' }
@@ -97,11 +97,11 @@ function PredictionReview({ pred, verdictCls, verdictLabel }) {
     : verdictCls === 'v-cheap' ? { bg: 'rgba(122,117,104,0.12)', color: '#9ca3af', border: 'rgba(122,117,104,0.25)' }
     :                            { bg: 'var(--coral-d)',   color: '#f87171', border: 'rgba(248,113,113,0.3)' };
 
-  const hit =
+    const hit =
     (pred.tier === 'LIKELY STEAL'    && (verdictCls === 'v-steal' || verdictCls === 'v-fair')) ||
     (pred.tier === 'LIKELY OVERPAID' && (verdictCls === 'v-over'  || verdictCls === 'v-cheap')) ||
-    (pred.tier === 'FAIR VALUE'      && (verdictCls === 'v-fair'  || verdictCls === 'v-steal')) ||
-    (pred.tier === 'WATCH'           && verdictCls !== 'v-steal');
+    (pred.tier === 'FAIR VALUE'      && (verdictCls === 'v-fair'  || verdictCls === 'v-over')) ||
+    (pred.tier === 'WATCH'           && (verdictCls === 'v-cheap' || verdictCls === 'v-over' || verdictCls === 'v-fair'));
 
   const outcomeColor = hit ? '#22c55e' : '#f87171';
   const outcomeLabel = hit ? 'Prediction aligned with final verdict' : 'Prediction did not match final verdict';
@@ -249,6 +249,8 @@ function CompleteCard({ player }) {
           pred={player.prediction}
           verdictCls={verdict.cls}
           verdictLabel={verdict.label}
+          actual={player.global_score}
+          player_price={player.auction_price_cr}
         />
       )}
     </div>
